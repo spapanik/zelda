@@ -16,3 +16,5 @@ Installation and Usage
 ----------------------
 
 To install and run the server locally, you can use docker-compose.
+
+There is a user with email `link@hyrule.gov` and password `hyrule` that you can use to login.

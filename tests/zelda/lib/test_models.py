@@ -21,6 +21,7 @@ class TestBaseModel:
 
     @pytest.fixture(autouse=True)
     def _create_users(self) -> None:
+        User.objects.all().delete()
         users = [
             User(email=email, is_superuser=False, is_staff=False)
             for email in self.emails

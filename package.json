@@ -1,0 +1,26 @@
+{
+    "name": "zelda",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Zelda armor app",
+    "authors": [
+        "Stephanos Kuma <stephanos@kuma.ai>"
+    ],
+    "scripts": {
+        "format": "prettier --list-different --write \"src/**/*.{ts,scss}\"",
+        "lint": "prettier --check \"src/**/*.{ts,scss}\" && eslint --max-warnings 0 --ext .ts src/ && tsc --noEmit",
+        "sass": "sass",
+        "tsc": "tsc"
+    },
+    "dependencies": {
+        "sass": "^1.58.3",
+        "typescript": "^4.9.5"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.53.0",
+        "@typescript-eslint/parser": "^5.53.0",
+        "eslint": "^8.16.0",
+        "eslint-config-prettier": "^8.3.0",
+        "prettier": "^2.6.2"
+    }
+}

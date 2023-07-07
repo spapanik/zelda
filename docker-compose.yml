@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  database:
+    platform: linux/amd64
+    image: postgres:15.2
+    environment:
+      POSTGRES_USER: zelda
+      POSTGRES_DB: zelda
+      POSTGRES_PASSWORD: M6hzeBBQxdNi4eYVY6GD
+    volumes:
+      - zelda-pgdata:/var/lib/postgresql/data
+    expose:
+      - "5432"
+
+  webserver:
+    platform: linux/amd64
+    env_file:
+      - .environ
+    depends_on:
+      - database
+    build:
+      context: .
+    environment:
+      - PGHOST=database
+      - PGUSER=zelda
+      - PGPASSWORD=M6hzeBBQxdNi4eYVY6GD
+    ports:
+      - "8000:8000"
+
+volumes:
+  zelda-pgdata:

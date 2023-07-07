@@ -1,0 +1,3 @@
+DJANGO_SETTINGS_MODULE=zelda.settings
+PYTHONBREAKPOINT=ipdb.set_trace
+WERKZEUG_DEBUG_PIN=off

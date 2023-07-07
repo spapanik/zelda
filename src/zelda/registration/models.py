@@ -1,12 +1,15 @@
 from __future__ import annotations
 
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 from zelda.lib.models import BaseModel, BaseQuerySet
+
+if TYPE_CHECKING:
+    from zelda.armor.models import UserArmor
 
 
 class UserManager(BaseUserManager.from_queryset(BaseQuerySet["User"])):  # type: ignore[misc]
@@ -50,11 +53,13 @@ class User(AbstractUser, BaseModel):
     first_name = None  # type: ignore[assignment]
     last_name = None  # type: ignore[assignment]
     email = models.EmailField(unique=True)
+    armor = models.ManyToManyField("armor.Armor", through="armor.UserArmor")
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS: list[str] = []
 
     objects = UserManager()
+    armor_levels: models.Manager[UserArmor]
 
     class Meta(AbstractUser.Meta):
         swappable = "AUTH_USER_MODEL"

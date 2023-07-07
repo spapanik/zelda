@@ -1,7 +1,13 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
+from zelda.armor.models import Armor
 from zelda.registration.models import User
+
+
+class UserArmorInline(admin.TabularInline[Armor, User]):
+    model = User.armor.through  # type: ignore[assignment]
+    extra = 1
 
 
 @admin.register(User)
@@ -17,3 +23,4 @@ class UserAdmin(BaseUserAdmin):
     search_fields = ["email"]
     ordering = ["email"]
     list_display = ["email", "is_staff"]
+    inlines = [UserArmorInline]

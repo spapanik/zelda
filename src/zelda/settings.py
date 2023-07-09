@@ -6,6 +6,7 @@ import django_stubs_ext
 from dj_settings.utils import setting
 
 BASE_DIR = pathlib.Path(__file__).parents[2]
+PROJECT_DIR = BASE_DIR.joinpath("src")
 project_setting = partial(setting, base_dir=BASE_DIR, filename="zelda.yml")
 django_stubs_ext.monkeypatch()
 

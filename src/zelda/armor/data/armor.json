@@ -1,0 +1,2731 @@
+{
+    "Hylian Hood": {
+        "set": "HYLIAN_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 70
+            },
+            {
+                "BOKOBLIN_HORN": 5
+            },
+            {
+                "BLUE_BOKOBLIN_HORN": 5,
+                "BOKOBLIN_FANG": 3
+            },
+            {
+                "AMBER": 20,
+                "BOKOBLIN_GUTS": 3,
+                "BLACK_BOKOBLIN_HORN": 5
+            },
+            {
+                "AMBER": 30,
+                "BOKOBLIN_GUTS": 5,
+                "SILVER_BOKOBLIN_HORN": 5
+            }
+        ]
+    },
+     "Hylian Trousers": {
+        "set": "HYLIAN_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "RUPEE": 120
+            },
+            {
+                "BOKOBLIN_HORN": "5"
+            },
+            {
+                "BLUE_BOKOBLIN_HORN": "5",
+                "BOKOBLIN_FANG": "3"
+            },
+            {
+                "AMBER": "20",
+                "BOKOBLIN_GUTS": "3",
+                "BLACK_BOKOBLIN_HORN": "5"
+            },
+            {
+                "AMBER": "30",
+                "BOKOBLIN_GUTS": "5",
+                "SILVER_BOKOBLIN_HORN": "5"
+            }
+        ]
+    },
+    "Hylian Tunic": {
+        "set": "HYLIAN_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "RUPEE": 130
+            },
+            {
+                "BOKOBLIN_HORN": "5"
+            },
+            {
+                "BLUE_BOKOBLIN_HORN": "5",
+                "BOKOBLIN_FANG": "3"
+            },
+            {
+                "AMBER": "20",
+                "BOKOBLIN_GUTS": "3",
+                "BLACK_BOKOBLIN_HORN": "5"
+            },
+            {
+                "AMBER": "30",
+                "BOKOBLIN_GUTS": "5",
+                "SILVER_BOKOBLIN_HORN": "5"
+            }
+        ]
+    },
+    "Cap of the Wild": {
+        "set": "ARMOR_OF_THE_WILD",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "ACORN": "10",
+                "FAROSH_S_SCALE": "2"
+            },
+            {
+                "COURSER_BEE_HONEY": "5",
+                "FAROSH_S_CLAW": "2"
+            },
+            {
+                "ENERGETIC_RHINO_BEETLE": "3",
+                "SHARD_OF_FAROSH_S_FANG": "2",
+                "SHARD_OF_FAROSH_S_SPIKE": "5"
+            },
+            {
+                "STAR_FRAGMENT": "3",
+                "FAROSH_S_HORN": "2",
+                "SHARD_OF_FAROSH_S_SPIKE": "10"
+            }
+        ]
+    },
+    "Trousers of the Wild": {
+        "set": "ARMOR_OF_THE_WILD",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "ACORN": "10",
+                "FAROSH_S_SCALE": "2"
+            },
+            {
+                "COURSER_BEE_HONEY": "5",
+                "FAROSH_S_CLAW": "2"
+            },
+            {
+                "ENERGETIC_RHINO_BEETLE": "3",
+                "SHARD_OF_FAROSH_S_FANG": "2",
+                "SHARD_OF_FAROSH_S_SPIKE": "5"
+            },
+            {
+                "STAR_FRAGMENT": "3",
+                "FAROSH_S_HORN": "2",
+                "SHARD_OF_FAROSH_S_SPIKE": "10"
+            }
+        ]
+    },
+    "Tunic of the Wild": {
+        "set": "ARMOR_OF_THE_WILD",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "ACORN": "10",
+                "FAROSH_S_SCALE": "2"
+            },
+            {
+                "COURSER_BEE_HONEY": "5",
+                "FAROSH_S_CLAW": "2"
+            },
+            {
+                "ENERGETIC_RHINO_BEETLE": "3",
+                "SHARD_OF_FAROSH_S_FANG": "2",
+                "SHARD_OF_FAROSH_S_SPIKE": "5"
+            },
+            {
+                "STAR_FRAGMENT": "3",
+                "FAROSH_S_HORN": "2",
+                "SHARD_OF_FAROSH_S_SPIKE": "10"
+            }
+        ]
+    },
+    "Zora Helm": {
+        "set": "ZORA_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "LIZALFOS_HORN": "3"
+            },
+            {
+                "HYRULE_BASS": "5",
+                "LIZALFOS_TALON": "5"
+            },
+            {
+                "HEARTY_BASS": "3",
+                "LIZALFOS_TAIL": "3",
+                "BLUE_LIZALFOS_HORN": "5"
+            },
+            {
+                "BLACK_LIZALFOS_HORN": "5",
+                "BLUE_LIZALFOS_TAIL": "5",
+                "OPAL": "20"
+            }
+        ]
+    },
+    "Zora Greaves": {
+        "set": "ZORA_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "LIZALFOS_HORN": "3"
+            },
+            {
+                "HYRULE_BASS": "5",
+                "LIZALFOS_TALON": "5"
+            },
+            {
+                "HEARTY_BASS": "3",
+                "LIZALFOS_TAIL": "3",
+                "BLUE_LIZALFOS_HORN": "5"
+            },
+            {
+                "BLACK_LIZALFOS_HORN": "5",
+                "BLUE_LIZALFOS_TAIL": "5",
+                "OPAL": "20"
+            }
+        ]
+    },
+    "Zora Armor": {
+        "set": "ZORA_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "LIZALFOS_HORN": "3"
+            },
+            {
+                "HYRULE_BASS": "5",
+                "LIZALFOS_TALON": "5"
+            },
+            {
+                "HEARTY_BASS": "3",
+                "LIZALFOS_TAIL": "3",
+                "BLUE_LIZALFOS_HORN": "5"
+            },
+            {
+                "BLACK_LIZALFOS_HORN": "5",
+                "BLUE_LIZALFOS_TAIL": "5",
+                "OPAL": "20"
+            }
+        ]
+    },
+    "Desert Voe Headband": {
+        "set": "DESERT_VOE_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 450
+            },
+            {
+                "WHITE_CHUCHU_JELLY": "3"
+            },
+            {
+                "WHITE_CHUCHU_JELLY": "5",
+                "COOL_SAFFLINA": "3"
+            },
+            {
+                "CHILLSHROOM": "5",
+                "ICE_KEESE_WING": "5",
+                "ICE_BREATH_LIZALFOS_TAIL": "3"
+            },
+            {
+                "ICE_BREATH_LIZALFOS_HORN": "5",
+                "ICE_BREATH_LIZALFOS_TAIL": "10",
+                "SAPPHIRE": "5"
+            }
+        ]
+    },
+    "Desert Voe Trousers": {
+        "set": "DESERT_VOE_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "RUPEE": 650
+            },
+            {
+                "WHITE_CHUCHU_JELLY": "3"
+            },
+            {
+                "WHITE_CHUCHU_JELLY": "5",
+                "COOL_SAFFLINA": "3"
+            },
+            {
+                "CHILLSHROOM": "5",
+                "ICE_KEESE_WING": "5",
+                "ICE_BREATH_LIZALFOS_TAIL": "3"
+            },
+            {
+                "ICE_BREATH_LIZALFOS_HORN": "5",
+                "ICE_BREATH_LIZALFOS_TAIL": "10",
+                "SAPPHIRE": "5"
+            }
+        ]
+    },
+    "Desert Voe Spaulder": {
+        "set": "DESERT_VOE_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "RUPEE": 1300
+            },
+            {
+                "WHITE_CHUCHU_JELLY": "3"
+            },
+            {
+                "WHITE_CHUCHU_JELLY": "5",
+                "COOL_SAFFLINA": "3"
+            },
+            {
+                "CHILLSHROOM": "5",
+                "ICE_KEESE_WING": "5",
+                "ICE_BREATH_LIZALFOS_TAIL": "3"
+            },
+            {
+                "ICE_BREATH_LIZALFOS_HORN": "5",
+                "ICE_BREATH_LIZALFOS_TAIL": "10",
+                "SAPPHIRE": "5"
+            }
+        ]
+    },
+    "Snowquill Headdress": {
+        "set": "SNOWQUILL_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 650
+            },
+            {
+                "RED_CHUCHU_JELLY": "3"
+            },
+            {
+                "RED_CHUCHU_JELLY": "5",
+                "WARM_SAFFLINA": "3"
+            },
+            {
+                "SUNSHROOM": "5",
+                "FIRE_KEESE_WING": "5",
+                "FIRE_BREATH_LIZALFOS_TAIL": "3"
+            },
+            {
+                "RUBY": "5",
+                "FIRE_BREATH_LIZALFOS_HORN": "5",
+                "FIRE_BREATH_LIZALFOS_TAIL": "10"
+            }
+        ]
+    },
+    "Snowquill Trousers": {
+        "set": "SNOWQUILL_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "RUPEE": 1000
+            },
+            {
+                "RED_CHUCHU_JELLY": "3"
+            },
+            {
+                "RED_CHUCHU_JELLY": "5",
+                "WARM_SAFFLINA": "3"
+            },
+            {
+                "SUNSHROOM": "5",
+                "FIRE_KEESE_WING": "5",
+                "FIRE_BREATH_LIZALFOS_TAIL": "3"
+            },
+            {
+                "RUBY": "5",
+                "FIRE_BREATH_LIZALFOS_HORN": "5",
+                "FIRE_BREATH_LIZALFOS_TAIL": "10"
+            }
+        ]
+    },
+    "Snowquill Tunic": {
+        "set": "SNOWQUILL_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "RUPEE": 500
+            },
+            {
+                "RED_CHUCHU_JELLY": "3"
+            },
+            {
+                "RED_CHUCHU_JELLY": "5",
+                "WARM_SAFFLINA": "3"
+            },
+            {
+                "SUNSHROOM": "5",
+                "FIRE_KEESE_WING": "5",
+                "FIRE_BREATH_LIZALFOS_TAIL": "3"
+            },
+            {
+                "RUBY": "5",
+                "FIRE_BREATH_LIZALFOS_HORN": "5",
+                "FIRE_BREATH_LIZALFOS_TAIL": "10"
+            }
+        ]
+    },
+    "Flamebreaker Helm": {
+        "set": "FLAMEBREAKER_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 1400
+            },
+            {
+                "MOBLIN_HORN": "3"
+            },
+            {
+                "MOBLIN_FANG": "5",
+                "FIREPROOF_LIZARD": "5"
+            },
+            {
+                "BLUE_MOBLIN_HORN": "5",
+                "FLINT": "15",
+                "SMOTHERWING_BUTTERFLY": "3"
+            },
+            {
+                "FIRE_BREATH_LIZALFOS_HORN": "5",
+                "FIRE_BREATH_LIZALFOS_TAIL": "10",
+                "RUBY": "5"
+            }
+        ]
+    },
+    "Flamebreaker Boots": {
+        "set": "FLAMEBREAKER_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "RUPEE": 1200
+            },
+            {
+                "MOBLIN_HORN": "3"
+            },
+            {
+                "MOBLIN_FANG": "5",
+                "FIREPROOF_LIZARD": "5"
+            },
+            {
+                "BLUE_MOBLIN_HORN": "5",
+                "FLINT": "15",
+                "SMOTHERWING_BUTTERFLY": "3"
+            },
+            {
+                "FIRE_BREATH_LIZALFOS_HORN": "5",
+                "FIRE_BREATH_LIZALFOS_TAIL": "10",
+                "RUBY": "5"
+            }
+        ]
+    },
+    "Flamebreaker Armor": {
+        "set": "FLAMEBREAKER_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "RUPEE": 700
+            },
+            {
+                "MOBLIN_HORN": "3"
+            },
+            {
+                "MOBLIN_FANG": "5",
+                "FIREPROOF_LIZARD": "5"
+            },
+            {
+                "BLUE_MOBLIN_HORN": "5",
+                "FLINT": "15",
+                "SMOTHERWING_BUTTERFLY": "3"
+            },
+            {
+                "FIRE_BREATH_LIZALFOS_HORN": "5",
+                "FIRE_BREATH_LIZALFOS_TAIL": "10",
+                "RUBY": "5"
+            }
+        ]
+    },
+    "Stealth Mask": {
+        "set": "STEALTH_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 500
+            },
+            {
+                "BLUE_NIGHTSHADE": "3"
+            },
+            {
+                "SUNSET_FIREFLY": "5",
+                "BLUE_NIGHTSHADE": "5"
+            },
+            {
+                "SILENT_SHROOM": "8",
+                "SNEAKY_RIVER_SNAIL": "5"
+            },
+            {
+                "SUNDELION": "10",
+                "STEALTHFIN_TROUT": "10",
+                "SILENT_PRINCESS": "5"
+            }
+        ]
+    },
+    "Stealth Tights": {
+        "set": "STEALTH_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "RUPEE": 600
+            },
+            {
+                "BLUE_NIGHTSHADE": "3"
+            },
+            {
+                "SUNSET_FIREFLY": "5",
+                "BLUE_NIGHTSHADE": "5"
+            },
+            {
+                "SILENT_SHROOM": "8",
+                "SNEAKY_RIVER_SNAIL": "5"
+            },
+            {
+                "SUNDELION": "10",
+                "STEALTHFIN_TROUT": "10",
+                "SILENT_PRINCESS": "5"
+            }
+        ]
+    },
+    "Stealth Chest Guard": {
+        "set": "STEALTH_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "RUPEE": 700
+            },
+            {
+                "BLUE_NIGHTSHADE": "3"
+            },
+            {
+                "SUNSET_FIREFLY": "5",
+                "BLUE_NIGHTSHADE": "5"
+            },
+            {
+                "SILENT_SHROOM": "8",
+                "SNEAKY_RIVER_SNAIL": "5"
+            },
+            {
+                "SUNDELION": "10",
+                "STEALTHFIN_TROUT": "10",
+                "SILENT_PRINCESS": "5"
+            }
+        ]
+    },
+    "Climber's Bandanna": {
+        "set": "CLIMBING_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "KEESE_WING": "3",
+                "RUSHROOM": "3"
+            },
+            {
+                "ELECTRIC_KEESE_WING": "5",
+                "HIGHTAIL_LIZARD": "5"
+            },
+            {
+                "HOT_FOOTED_FROG": "10",
+                "ICE_KEESE_WING": "8"
+            },
+            {
+                "SWIFT_VIOLET": "20",
+                "FIRE_KEESE_WING": "10"
+            }
+        ]
+    },
+    "Climbing Boots": {
+        "set": "CLIMBING_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "KEESE_WING": "3",
+                "RUSHROOM": "3"
+            },
+            {
+                "ELECTRIC_KEESE_WING": "5",
+                "HIGHTAIL_LIZARD": "5"
+            },
+            {
+                "HOT_FOOTED_FROG": "10",
+                "ICE_KEESE_WING": "8"
+            },
+            {
+                "SWIFT_VIOLET": "20",
+                "FIRE_KEESE_WING": "10"
+            }
+        ]
+    },
+    "Climbing Gear": {
+        "set": "CLIMBING_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "KEESE_WING": "3",
+                "RUSHROOM": "3"
+            },
+            {
+                "ELECTRIC_KEESE_WING": "5",
+                "HIGHTAIL_LIZARD": "5"
+            },
+            {
+                "HOT_FOOTED_FROG": "10",
+                "ICE_KEESE_WING": "8"
+            },
+            {
+                "SWIFT_VIOLET": "20",
+                "FIRE_KEESE_WING": "10"
+            }
+        ]
+    },
+    "Radiant Mask": {
+        "set": "RADIANT_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 800
+            },
+            {
+                "LUMINOUS_STONE": "10",
+                "BOKOBLIN_GUTS": "1"
+            },
+            {
+                "LUMINOUS_STONE": "15",
+                "MOBLIN_GUTS": "2"
+            },
+            {
+                "LUMINOUS_STONE": "20",
+                "HORRIBLIN_GUTS": "3",
+                "GIBDO_BONE": "10"
+            },
+            {
+                "LUMINOUS_STONE": "30",
+                "LYNEL_GUTS": "3",
+                "MOLDUGA_JAW": "3"
+            }
+        ]
+    },
+    "Radiant Tights": {
+        "set": "RADIANT_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "RUPEE": 800
+            },
+            {
+                "LUMINOUS_STONE": "10",
+                "BOKOBLIN_GUTS": "1"
+            },
+            {
+                "LUMINOUS_STONE": "15",
+                "MOBLIN_GUTS": "2"
+            },
+            {
+                "LUMINOUS_STONE": "20",
+                "HORRIBLIN_GUTS": "3",
+                "GIBDO_BONE": "10"
+            },
+            {
+                "LUMINOUS_STONE": "30",
+                "LYNEL_GUTS": "3",
+                "MOLDUGA_JAW": "3"
+            }
+        ]
+    },
+    "Radiant Shirt": {
+        "set": "RADIANT_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "RUPEE": 800
+            },
+            {
+                "LUMINOUS_STONE": "10",
+                "BOKOBLIN_GUTS": "1"
+            },
+            {
+                "LUMINOUS_STONE": "15",
+                "MOBLIN_GUTS": "2"
+            },
+            {
+                "LUMINOUS_STONE": "20",
+                "HORRIBLIN_GUTS": "3",
+                "GIBDO_BONE": "10"
+            },
+            {
+                "LUMINOUS_STONE": "30",
+                "LYNEL_GUTS": "3",
+                "MOLDUGA_JAW": "3"
+            }
+        ]
+    },
+    "Soldier's Helm": {
+        "set": "SOLDIERS_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "CHUCHU_JELLY": "5",
+                "BOKOBLIN_GUTS": "3"
+            },
+            {
+                "KEESE_EYEBALL": "5",
+                "MOBLIN_GUTS": "3"
+            },
+            {
+                "FLINT": "30",
+                "LIZALFOS_TAIL": "3",
+                "HINOX_GUTS": "3"
+            },
+            {
+                "LYNEL_HOOF": "5",
+                "LYNEL_GUTS": "5",
+                "AMBER": "30"
+            }
+        ]
+    },
+    "Soldier's Greaves": {
+        "set": "SOLDIERS_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "CHUCHU_JELLY": "5",
+                "BOKOBLIN_GUTS": "3"
+            },
+            {
+                "KEESE_EYEBALL": "5",
+                "MOBLIN_GUTS": "3"
+            },
+            {
+                "FLINT": "30",
+                "LIZALFOS_TAIL": "3",
+                "HINOX_GUTS": "3"
+            },
+            {
+                "LYNEL_HOOF": "5",
+                "LYNEL_GUTS": "5",
+                "AMBER": "30"
+            }
+        ]
+    },
+    "Soldier's Armor": {
+        "set": "SOLDIERS_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "CHUCHU_JELLY": "5",
+                "BOKOBLIN_GUTS": "3"
+            },
+            {
+                "KEESE_EYEBALL": "5",
+                "MOBLIN_GUTS": "3"
+            },
+            {
+                "FLINT": "30",
+                "LIZALFOS_TAIL": "3",
+                "HINOX_GUTS": "3"
+            },
+            {
+                "LYNEL_HOOF": "5",
+                "LYNEL_GUTS": "5",
+                "AMBER": "30"
+            }
+        ]
+    },
+    "Bokoblin Mask": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Diamond Circlet": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 2400
+            },
+            {
+                "DIAMOND": "2",
+                "FLINT": "3"
+            },
+            {
+                "DIAMOND": "3",
+                "FLINT": "5"
+            },
+            {
+                "DIAMOND": "5",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "DIAMOND": "8",
+                "STAR_FRAGMENT": "2"
+            }
+        ]
+    },
+    "Ruby Circlet": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 1300
+            },
+            {
+                "RUBY": "2",
+                "FLINT": "3"
+            },
+            {
+                "RUBY": "4",
+                "FLINT": "5"
+            },
+            {
+                "RUBY": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "10",
+                "STAR_FRAGMENT": "2"
+            }
+        ]
+    },
+    "Sapphire Circlet": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 1400
+            },
+            {
+                "SAPPHIRE": "2",
+                "FLINT": "3"
+            },
+            {
+                "SAPPHIRE": "4",
+                "FLINT": "5"
+            },
+            {
+                "SAPPHIRE": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "10",
+                "STAR_FRAGMENT": "2"
+            }
+        ]
+    },
+    "Topaz Earrings": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 1200
+            },
+            {
+                "TOPAZ": "2",
+                "FLINT": "3"
+            },
+            {
+                "TOPAZ": "4",
+                "FLINT": "5"
+            },
+            {
+                "TOPAZ": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "10",
+                "STAR_FRAGMENT": "2"
+            }
+        ]
+    },
+    "Opal Earrings": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 700
+            },
+            {
+                "OPAL": "6",
+                "FLINT": "5"
+            },
+            {
+                "OPAL": "12",
+                "FLINT": "10"
+            },
+            {
+                "OPAL": "18",
+                "FLINT": "15"
+            },
+            {
+                "OPAL": "30",
+                "FLINT": "25"
+            }
+        ]
+    },
+    "Amber Earrings": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "RUPEE": 400
+            },
+            {
+                "AMBER": "10",
+                "FLINT": "5"
+            },
+            {
+                "AMBER": "20",
+                "FLINT": "10"
+            },
+            {
+                "AMBER": "35",
+                "FLINT": "15"
+            },
+            {
+                "AMBER": "60",
+                "FLINT": "25"
+            }
+        ]
+    },
+    "Moblin Mask": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "BUBBUL_GEM": 2
+            }
+        ]
+    },
+    "Rubber Helm": {
+        "set": "RUBBER_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "YELLOW_CHUCHU_JELLY": "3",
+                "ELECTRIC_LIZALFOS_HORN": "1"
+            },
+            {
+                "YELLOW_CHUCHU_JELLY": "8",
+                "VOLTFRUIT": "5"
+            },
+            {
+                "ZAPSHROOM": "5",
+                "ELECTRIC_LIZALFOS_TAIL": "5",
+                "ELECTRIC_SAFFLINA": "8"
+            },
+            {
+                "TOPAZ": "5",
+                "ELECTRIC_LIZALFOS_HORN": "5",
+                "ELECTRIC_LIZALFOS_TAIL": "8"
+            }
+        ]
+    },
+    "Rubber Tights": {
+        "set": "RUBBER_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "YELLOW_CHUCHU_JELLY": "3",
+                "ELECTRIC_LIZALFOS_HORN": "1"
+            },
+            {
+                "YELLOW_CHUCHU_JELLY": "8",
+                "VOLTFRUIT": "5"
+            },
+            {
+                "ZAPSHROOM": "5",
+                "ELECTRIC_LIZALFOS_TAIL": "5",
+                "ELECTRIC_SAFFLINA": "8"
+            },
+            {
+                "TOPAZ": "5",
+                "ELECTRIC_LIZALFOS_HORN": "5",
+                "ELECTRIC_LIZALFOS_TAIL": "8"
+            }
+        ]
+    },
+    "Rubber Armor": {
+        "set": "RUBBER_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "YELLOW_CHUCHU_JELLY": "3",
+                "ELECTRIC_LIZALFOS_HORN": "1"
+            },
+            {
+                "YELLOW_CHUCHU_JELLY": "8",
+                "VOLTFRUIT": "5"
+            },
+            {
+                "ZAPSHROOM": "5",
+                "ELECTRIC_LIZALFOS_TAIL": "5",
+                "ELECTRIC_SAFFLINA": "8"
+            },
+            {
+                "TOPAZ": "5",
+                "ELECTRIC_LIZALFOS_HORN": "5",
+                "ELECTRIC_LIZALFOS_TAIL": "8"
+            }
+        ]
+    },
+    "Barbarian Helm": {
+        "set": "BARBARIAN_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "MIGHTY_THISTLE": "3"
+            },
+            {
+                "RAZORSHROOM": "5",
+                "LYNEL_SABER_HORN": "2",
+                "LYNEL_MACE_HORN": "2"
+            },
+            {
+                "BLUE_MANED_LYNEL_SABER_HORN": "3",
+                "BLUE_MANED_LYNEL_MACE_HORN": "3",
+                "RAZORCLAW_CRAB": "3"
+            },
+            {
+                "WHITE_MANED_LYNEL_SABER_HORN": "3",
+                "WHITE_MANED_LYNEL_MACE_HORN": "3",
+                "BLADED_RHINO_BEETLE": "3"
+            }
+        ]
+    },
+    "Barbarian Leg Wraps": {
+        "set": "BARBARIAN_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "MIGHTY_THISTLE": "3"
+            },
+            {
+                "RAZORSHROOM": "5",
+                "LYNEL_SABER_HORN": "2",
+                "LYNEL_MACE_HORN": "2"
+            },
+            {
+                "BLUE_MANED_LYNEL_SABER_HORN": "3",
+                "BLUE_MANED_LYNEL_MACE_HORN": "3",
+                "RAZORCLAW_CRAB": "3"
+            },
+            {
+                "WHITE_MANED_LYNEL_SABER_HORN": "3",
+                "WHITE_MANED_LYNEL_MACE_HORN": "3",
+                "BLADED_RHINO_BEETLE": "3"
+            }
+        ]
+    },
+    "Barbarian Armor": {
+        "set": "BARBARIAN_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "MIGHTY_THISTLE": "3"
+            },
+            {
+                "RAZORSHROOM": "5",
+                "LYNEL_SABER_HORN": "2",
+                "LYNEL_MACE_HORN": "2"
+            },
+            {
+                "BLUE_MANED_LYNEL_SABER_HORN": "3",
+                "BLUE_MANED_LYNEL_MACE_HORN": "3",
+                "RAZORCLAW_CRAB": "3"
+            },
+            {
+                "WHITE_MANED_LYNEL_SABER_HORN": "3",
+                "WHITE_MANED_LYNEL_MACE_HORN": "3",
+                "BLADED_RHINO_BEETLE": "3"
+            }
+        ]
+    },
+    "Sand Boots": {
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "RUPEE": 1200
+            },
+            {
+                "HIGHTAIL_LIZARD": "3"
+            },
+            {
+                "GIBDO_BONE": "20",
+                "SWIFT_CARROT": "5"
+            },
+            {
+                "GIBDO_GUTS": "5",
+                "RUSHROOM": "10",
+                "MOLDUGA_FIN": "5"
+            },
+            {
+                "MOLDUGA_GUTS": "5",
+                "SWIFT_VIOLET": "10",
+                "HEARTY_LIZARD": "5"
+            }
+        ]
+    },
+    "Lizalfos Mask": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "BUBBUL_GEM": 3
+            }
+        ]
+    },
+    "Lynel Mask": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "BUBBUL_GEM": 4
+            }
+        ]
+    },
+    "Glide Mask": {
+        "set": "GLIDE_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "KEESE_WING": "3"
+            },
+            {
+                "AEROCUDA_WING": "5",
+                "AEROCUDA_EYEBALL": "6"
+            },
+            {
+                "AEROCUDA_WING": "6",
+                "AEROCUDA_EYEBALL": "8"
+            },
+            {
+                "AEROCUDA_WING": "10",
+                "GIBDO_WING": "8",
+                "GLEEOK_WING": "12"
+            }
+        ]
+    },
+    "Glide Tights": {
+        "set": "GLIDE_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "KEESE_WING": "3"
+            },
+            {
+                "AEROCUDA_WING": "5",
+                "AEROCUDA_EYEBALL": "6"
+            },
+            {
+                "AEROCUDA_WING": "6",
+                "AEROCUDA_EYEBALL": "8"
+            },
+            {
+                "AEROCUDA_WING": "10",
+                "GIBDO_WING": "8",
+                "GLEEOK_WING": "12"
+            }
+        ]
+    },
+    "Glide Shirt": {
+        "set": "GLIDE_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "KEESE_WING": "3"
+            },
+            {
+                "AEROCUDA_WING": "5",
+                "AEROCUDA_EYEBALL": "6"
+            },
+            {
+                "AEROCUDA_WING": "6",
+                "AEROCUDA_EYEBALL": "8"
+            },
+            {
+                "AEROCUDA_WING": "10",
+                "GIBDO_WING": "8",
+                "GLEEOK_WING": "12"
+            }
+        ]
+    },
+    "Ancient Hero's Aspect": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "SILVER_BOKOBLIN_HORN": "9",
+                "HINOX_GUTS": "9",
+                "ZONAITE": "15"
+            },
+            {
+                "SILVER_MOBLIN_HORN": "9",
+                "FROX_GUTS": "9",
+                "LARGE_ZONAITE": "10"
+            },
+            {
+                "SILVER_LIZALFOS_HORN": "9",
+                "MOLDUGA_GUTS": "9",
+                "LARGE_ZONAITE": "15"
+            },
+            {
+                "SILVER_LYNEL_SABER_HORN": "9",
+                "SILVER_LYNEL_MACE_HORN": "9",
+                "GLEEOK_GUTS": "9"
+            }
+        ]
+    },
+    "Archaic Legwear": {
+        "set": "ARCHAIC_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Archaic Tunic": {
+        "set": "ARCHAIC_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Archaic Warm Greaves": {
+        "body_part": "LEGS",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Froggy Hood": {
+        "set": "FROGGY_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "STICKY_LIZARD": "3"
+            },
+            {
+                "STICKY_LIZARD": "5",
+                "HORRIBLIN_HORN": "5"
+            },
+            {
+                "BLUE_HORRIBLIN_HORN": "5",
+                "STICKY_FROG": "5"
+            },
+            {
+                "BLACK_HORRIBLIN_HORN": "5",
+                "HORRIBLIN_GUTS": "10",
+                "OPAL": "10"
+            }
+        ]
+    },
+    "Froggy Leggings": {
+        "set": "FROGGY_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "STICKY_LIZARD": "3"
+            },
+            {
+                "STICKY_LIZARD": "5",
+                "HORRIBLIN_HORN": "5"
+            },
+            {
+                "BLUE_HORRIBLIN_HORN": "5",
+                "STICKY_FROG": "5"
+            },
+            {
+                "BLACK_HORRIBLIN_HORN": "5",
+                "HORRIBLIN_GUTS": "10",
+                "OPAL": "10"
+            }
+        ]
+    },
+    "Froggy Sleeve": {
+        "set": "FROGGY_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "STICKY_LIZARD": "3"
+            },
+            {
+                "STICKY_LIZARD": "5",
+                "HORRIBLIN_HORN": "5"
+            },
+            {
+                "BLUE_HORRIBLIN_HORN": "5",
+                "STICKY_FROG": "5"
+            },
+            {
+                "BLACK_HORRIBLIN_HORN": "5",
+                "HORRIBLIN_GUTS": "10",
+                "OPAL": "10"
+            }
+        ]
+    },
+    "Miner's Mask": {
+        "set": "MINER_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "BRIGHTBLOOM_SEED": "10"
+            },
+            {
+                "BRIGHTBLOOM_SEED": "20",
+                "BRIGHTCAP": "5"
+            },
+            {
+                "GIANT_BRIGHTBLOOM_SEED": "15",
+                "DEEP_FIREFLY": "10",
+                "GLOWING_CAVE_FISH": "5"
+            },
+            {
+                "GIANT_BRIGHTBLOOM_SEED": "20",
+                "LARGE_ZONAITE": "10",
+                "DIAMOND": "3"
+            }
+        ]
+    },
+    "Miner's Trousers": {
+        "set": "MINER_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "BRIGHTBLOOM_SEED": "10"
+            },
+            {
+                "BRIGHTBLOOM_SEED": "20",
+                "BRIGHTCAP": "5"
+            },
+            {
+                "GIANT_BRIGHTBLOOM_SEED": "15",
+                "DEEP_FIREFLY": "10",
+                "GLOWING_CAVE_FISH": "5"
+            },
+            {
+                "GIANT_BRIGHTBLOOM_SEED": "20",
+                "LARGE_ZONAITE": "10",
+                "DIAMOND": "3"
+            }
+        ]
+    },
+    "Miner's Top": {
+        "set": "MINER_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "BRIGHTBLOOM_SEED": "10"
+            },
+            {
+                "BRIGHTBLOOM_SEED": "20",
+                "BRIGHTCAP": "5"
+            },
+            {
+                "GIANT_BRIGHTBLOOM_SEED": "15",
+                "DEEP_FIREFLY": "10",
+                "GLOWING_CAVE_FISH": "5"
+            },
+            {
+                "GIANT_BRIGHTBLOOM_SEED": "20",
+                "LARGE_ZONAITE": "10",
+                "DIAMOND": "3"
+            }
+        ]
+    },
+    "Ember Headdress": {
+        "set": "EMBER_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "FIRE_FRUIT": "3"
+            },
+            {
+                "FIRE_BREATH_LIZALFOS_HORN": "5",
+                "SUMMERWING_BUTTERFLY": "5"
+            },
+            {
+                "FIRE_LIKE_STONE": "5",
+                "WARM_DARNER": "5",
+                "LARGE_ZONAI_CHARGE": "5"
+            },
+            {
+                "GLEEOK_FLAME_HORN": "5",
+                "SIZZLEFIN_TROUT": "10",
+                "LARGE_ZONAI_CHARGE": "10"
+            }
+        ]
+    },
+    "Ember Trousers": {
+        "set": "EMBER_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "FIRE_FRUIT": "3"
+            },
+            {
+                "FIRE_BREATH_LIZALFOS_HORN": "5",
+                "SUMMERWING_BUTTERFLY": "5"
+            },
+            {
+                "FIRE_LIKE_STONE": "5",
+                "WARM_DARNER": "5",
+                "LARGE_ZONAI_CHARGE": "5"
+            },
+            {
+                "GLEEOK_FLAME_HORN": "5",
+                "SIZZLEFIN_TROUT": "10",
+                "LARGE_ZONAI_CHARGE": "10"
+            }
+        ]
+    },
+    "Ember Shirt": {
+        "set": "EMBER_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "FIRE_FRUIT": "3"
+            },
+            {
+                "FIRE_BREATH_LIZALFOS_HORN": "5",
+                "SUMMERWING_BUTTERFLY": "5"
+            },
+            {
+                "FIRE_LIKE_STONE": "5",
+                "WARM_DARNER": "5",
+                "LARGE_ZONAI_CHARGE": "5"
+            },
+            {
+                "GLEEOK_FLAME_HORN": "5",
+                "SIZZLEFIN_TROUT": "10",
+                "LARGE_ZONAI_CHARGE": "10"
+            }
+        ]
+    },
+    "Charged Headdress": {
+        "set": "CHARGED_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "SHOCK_FRUIT": "3"
+            },
+            {
+                "THUNDERWING_BUTTERFLY": "3",
+                "ELECTRIC_LIZALFOS_HORN": "5"
+            },
+            {
+                "SHOCK_LIKE_STONE": "5",
+                "ELECTRIC_DARNER": "5",
+                "LARGE_ZONAI_CHARGE": "3"
+            },
+            {
+                "GLEEOK_THUNDER_HORN": "5",
+                "VOLTFIN_TROUT": "10",
+                "LARGE_ZONAI_CHARGE": "5"
+            }
+        ]
+    },
+    "Charged Trousers": {
+        "set": "CHARGED_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "SHOCK_FRUIT": "3"
+            },
+            {
+                "THUNDERWING_BUTTERFLY": "3",
+                "ELECTRIC_LIZALFOS_HORN": "5"
+            },
+            {
+                "SHOCK_LIKE_STONE": "5",
+                "ELECTRIC_DARNER": "5",
+                "LARGE_ZONAI_CHARGE": "3"
+            },
+            {
+                "GLEEOK_THUNDER_HORN": "5",
+                "VOLTFIN_TROUT": "10",
+                "LARGE_ZONAI_CHARGE": "5"
+            }
+        ]
+    },
+    "Charged Shirt": {
+        "set": "CHARGED_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "SHOCK_FRUIT": "3"
+            },
+            {
+                "THUNDERWING_BUTTERFLY": "3",
+                "ELECTRIC_LIZALFOS_HORN": "5"
+            },
+            {
+                "SHOCK_LIKE_STONE": "5",
+                "ELECTRIC_DARNER": "5",
+                "LARGE_ZONAI_CHARGE": "3"
+            },
+            {
+                "GLEEOK_THUNDER_HORN": "5",
+                "VOLTFIN_TROUT": "10",
+                "LARGE_ZONAI_CHARGE": "5"
+            }
+        ]
+    },
+    "Frostbite Headdress": {
+        "set": "FROSTBITE_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "ICE_FRUIT": "3"
+            },
+            {
+                "ICE_BREATH_LIZALFOS_HORN": "5",
+                "WINTERWING_BUTTERFLY": "5"
+            },
+            {
+                "ICE_LIKE_STONE": "5",
+                "COLD_DARNER": "5",
+                "LARGE_ZONAI_CHARGE": "5"
+            },
+            {
+                "GLEEOK_FROST_HORN": "5",
+                "CHILLFIN_TROUT": "10",
+                "LARGE_ZONAI_CHARGE": "10"
+            }
+        ]
+    },
+    "Frostbite Trousers": {
+        "set": "FROSTBITE_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "ICE_FRUIT": "3"
+            },
+            {
+                "ICE_BREATH_LIZALFOS_HORN": "5",
+                "WINTERWING_BUTTERFLY": "5"
+            },
+            {
+                "ICE_LIKE_STONE": "5",
+                "COLD_DARNER": "5",
+                "LARGE_ZONAI_CHARGE": "5"
+            },
+            {
+                "GLEEOK_FROST_HORN": "5",
+                "CHILLFIN_TROUT": "10",
+                "LARGE_ZONAI_CHARGE": "10"
+            }
+        ]
+    },
+    "Frostbite Shirt": {
+        "set": "FROSTBITE_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "ICE_FRUIT": "3"
+            },
+            {
+                "ICE_BREATH_LIZALFOS_HORN": "5",
+                "WINTERWING_BUTTERFLY": "5"
+            },
+            {
+                "ICE_LIKE_STONE": "5",
+                "COLD_DARNER": "5",
+                "LARGE_ZONAI_CHARGE": "5"
+            },
+            {
+                "GLEEOK_FROST_HORN": "5",
+                "CHILLFIN_TROUT": "10",
+                "LARGE_ZONAI_CHARGE": "10"
+            }
+        ]
+    },
+    "Cece Hat": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Mystic Headpiece": {
+        "set": "MYSTIC_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "BUBBUL_GEM": 5
+            }
+        ]
+    },
+    "Mystic Trousers": {
+        "set": "MYSTIC_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "BUBBUL_GEM": 4
+            }
+        ]
+    },
+    "Mystic Robe": {
+        "set": "MYSTIC_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "BUBBUL_GEM": 3
+            }
+        ]
+    },
+    "Zonaite Helm": {
+        "set": "ZONAITE_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "SOLDIER_CONSTRUCT_HORN": "5"
+            },
+            {
+                "SOLDIER_CONSTRUCT_II_HORN": "5",
+                "ZONAITE": "5",
+                "CAPTAIN_CONSTRUCT_I_HORN": "5"
+            },
+            {
+                "LARGE_ZONAITE": "5",
+                "CAPTAIN_CONSTRUCT_II_HORN": "5",
+                "SOLDIER_CONSTRUCT_III_HORN": "5"
+            },
+            {
+                "LARGE_ZONAITE": "10",
+                "CAPTAIN_CONSTRUCT_III_HORN": "5",
+                "SOLDIER_CONSTRUCT_IV_HORN": "5"
+            }
+        ]
+    },
+    "Zonaite Shin Guards": {
+        "set": "ZONAITE_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "SOLDIER_CONSTRUCT_HORN": "5"
+            },
+            {
+                "SOLDIER_CONSTRUCT_II_HORN": "5",
+                "ZONAITE": "5",
+                "CAPTAIN_CONSTRUCT_I_HORN": "5"
+            },
+            {
+                "LARGE_ZONAITE": "5",
+                "CAPTAIN_CONSTRUCT_II_HORN": "5",
+                "SOLDIER_CONSTRUCT_III_HORN": "5"
+            },
+            {
+                "LARGE_ZONAITE": "10",
+                "CAPTAIN_CONSTRUCT_III_HORN": "5",
+                "SOLDIER_CONSTRUCT_IV_HORN": "5"
+            }
+        ]
+    },
+    "Zonaite Waistguard": {
+        "set": "ZONAITE_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "SOLDIER_CONSTRUCT_HORN": "5"
+            },
+            {
+                "SOLDIER_CONSTRUCT_II_HORN": "5",
+                "ZONAITE": "5",
+                "CAPTAIN_CONSTRUCT_I_HORN": "5"
+            },
+            {
+                "LARGE_ZONAITE": "5",
+                "CAPTAIN_CONSTRUCT_II_HORN": "5",
+                "SOLDIER_CONSTRUCT_III_HORN": "5"
+            },
+            {
+                "LARGE_ZONAITE": "10",
+                "CAPTAIN_CONSTRUCT_III_HORN": "5",
+                "SOLDIER_CONSTRUCT_IV_HORN": "5"
+            }
+        ]
+    },
+    "Mask of Awakening": {
+        "set": "AWAKENING_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "LUMINOUS_STONE": "10",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "LUMINOUS_STONE": "15",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "LUMINOUS_STONE": "20",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "LUMINOUS_STONE": "30",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Trousers of Awakening": {
+        "set": "AWAKENING_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "LUMINOUS_STONE": "10",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "LUMINOUS_STONE": "15",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "LUMINOUS_STONE": "20",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "LUMINOUS_STONE": "30",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Tunic of Awakening": {
+        "set": "AWAKENING_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "LUMINOUS_STONE": "10",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "LUMINOUS_STONE": "15",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "LUMINOUS_STONE": "20",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "LUMINOUS_STONE": "30",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Champion's Tunic": {
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "SILENT_PRINCESS": "3",
+                "LIGHT_DRAGON_S_SCALE": "2"
+            },
+            {
+                "SILENT_PRINCESS": "3",
+                "LIGHT_DRAGON_S_TALON": "2",
+                "SUNDELION": "10"
+            },
+            {
+                "SILENT_PRINCESS": "5",
+                "SHARD_OF_LIGHT_DRAGON_S_FANG": "2",
+                "SUNDELION": "15"
+            },
+            {
+                "SILENT_PRINCESS": "10",
+                "LIGHT_DRAGON_S_HORN": "2",
+                "SUNDELION": "20"
+            }
+        ]
+    },
+    "Horriblin Mask": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "BUBBUL_GEM": 4
+            }
+        ]
+    },
+    "Hood of the Depths": {
+        "set": "ARMOR_OF_THE_DEPTHS_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "POE": 300
+            },
+            {
+                "DEEP_FIREFLY": "3"
+            },
+            {
+                "DARK_CLUMP": "5",
+                "FROX_FANG": "3"
+            },
+            {
+                "ZONAITE": "20",
+                "FROX_FINGERNAIL": "3",
+                "OBSIDIAN_FROX_FANG": "3"
+            },
+            {
+                "BLUE_WHITE_FROX_FANG": "5",
+                "LARGE_ZONAITE": "10",
+                "FROX_GUTS": "3"
+            }
+        ]
+    },
+    "Gaiters of the Depths": {
+        "set": "ARMOR_OF_THE_DEPTHS_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "POE": 200
+            },
+            {
+                "DEEP_FIREFLY": "3"
+            },
+            {
+                "DARK_CLUMP": "5",
+                "FROX_FANG": "3"
+            },
+            {
+                "ZONAITE": "20",
+                "FROX_FINGERNAIL": "3",
+                "OBSIDIAN_FROX_FANG": "3"
+            },
+            {
+                "BLUE_WHITE_FROX_FANG": "5",
+                "LARGE_ZONAITE": "10",
+                "FROX_GUTS": "3"
+            }
+        ]
+    },
+    "Tunic of the Depths": {
+        "set": "ARMOR_OF_THE_DEPTHS_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "POE": 150
+            },
+            {
+                "DEEP_FIREFLY": "3"
+            },
+            {
+                "DARK_CLUMP": "5",
+                "FROX_FANG": "3"
+            },
+            {
+                "ZONAITE": "20",
+                "FROX_FINGERNAIL": "3",
+                "OBSIDIAN_FROX_FANG": "3"
+            },
+            {
+                "BLUE_WHITE_FROX_FANG": "5",
+                "LARGE_ZONAITE": "10",
+                "FROX_GUTS": "3"
+            }
+        ]
+    },
+    "Well-Worn Hair Band": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Lightning Helm": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Tunic of Memories": {
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "POE": 400
+            },
+            {
+                "SILENT_PRINCESS": "3",
+                "LIGHT_DRAGON_S_SCALE": "1"
+            },
+            {
+                "SILENT_PRINCESS": "3",
+                "LIGHT_DRAGON_S_TALON": "1",
+                "FAROSH_S_HORN": "2"
+            },
+            {
+                "SILENT_PRINCESS": "5",
+                "SHARD_OF_LIGHT_DRAGON_S_FANG": "1",
+                "NAYDRA_S_HORN": "2"
+            },
+            {
+                "SILENT_PRINCESS": "10",
+                "LIGHT_DRAGON_S_HORN": "1",
+                "DINRAAL_S_HORN": "2"
+            }
+        ]
+    },
+    "Yiga Mask": {
+        "set": "YIGA_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "OCTOROK_EYEBALL": "2"
+            },
+            {
+                "PUFFSHROOM": "3",
+                "FIRE_BREATH_LIZALFOS_TAIL": "3"
+            },
+            {
+                "ICE_BREATH_LIZALFOS_TAIL": "5",
+                "KEESE_EYEBALL": "5"
+            },
+            {
+                "ELECTRIC_LIZALFOS_TAIL": "5",
+                "BLACK_HINOX_HORN": "3",
+                "MIGHTY_BANANAS": "10"
+            }
+        ]
+    },
+    "Yiga Tights": {
+        "set": "YIGA_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "OCTOROK_EYEBALL": "2"
+            },
+            {
+                "PUFFSHROOM": "3",
+                "FIRE_BREATH_LIZALFOS_TAIL": "3"
+            },
+            {
+                "ICE_BREATH_LIZALFOS_TAIL": "5",
+                "KEESE_EYEBALL": "5"
+            },
+            {
+                "ELECTRIC_LIZALFOS_TAIL": "5",
+                "BLACK_HINOX_HORN": "3",
+                "MIGHTY_BANANAS": "10"
+            }
+        ]
+    },
+    "Yiga Armor": {
+        "set": "YIGA_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "OCTOROK_EYEBALL": "2"
+            },
+            {
+                "PUFFSHROOM": "3",
+                "FIRE_BREATH_LIZALFOS_TAIL": "3"
+            },
+            {
+                "ICE_BREATH_LIZALFOS_TAIL": "5",
+                "KEESE_EYEBALL": "5"
+            },
+            {
+                "ELECTRIC_LIZALFOS_TAIL": "5",
+                "BLACK_HINOX_HORN": "3",
+                "MIGHTY_BANANAS": "10"
+            }
+        ]
+    },
+    "Snow Boots": {
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "RUPEE": 1300
+            },
+            {
+                "HIGHTAIL_LIZARD": "3"
+            },
+            {
+                "OCTOROK_TENTACLE": "5",
+                "SWIFT_CARROT": "5"
+            },
+            {
+                "OCTO_BALLOON": "5",
+                "RUSHROOM": "20"
+            },
+            {
+                "NAYDRA_S_SCALE": "2",
+                "SWIFT_VIOLET": "20"
+            }
+        ]
+    },
+    "Dark Hood": {
+        "set": "DARK_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {
+                "POE": 300
+            }
+        ]
+    },
+    "Dark Trousers": {
+        "set": "DARK_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {
+                "POE": 200
+            }
+        ]
+    },
+    "Dark Tunic": {
+        "set": "DARK_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {
+                "POE": 150
+            }
+        ]
+    },
+    "Phantom Helmet": {
+        "set": "PHANTOM_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Phantom Greaves": {
+        "set": "PHANTOM_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Phantom Armor": {
+        "set": "PHANTOM_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Majora's Mask": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Midna's Helmet": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Tingle's Hood": {
+        "set": "TINGLE_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Tingle's Tights": {
+        "set": "TINGLE_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Tingle's Shirt": {
+        "set": "TINGLE_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Island Lobster Shirt": {
+        "body_part": "BODY",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Korok Mask": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Ravio's Hood": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Zant's Helmet": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Royal Guard Cap": {
+        "set": "ROYAL_GUARD_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "BOKOBLIN_GUTS": "3",
+                "BOSS_BOKOBLIN_HORN": "3"
+            },
+            {
+                "BLUE_BOSS_BOKOBLIN_HORN": "3",
+                "BOSS_BOKOBLIN_FANG": "3"
+            },
+            {
+                "BLACK_BOSS_BOKOBLIN_HORN": "3",
+                "HINOX_GUTS": "3"
+            },
+            {
+                "SILVER_BOSS_BOKOBLIN_HORN": "3",
+                "MOLDUGA_GUTS": "3",
+                "GLEEOK_GUTS": "3"
+            }
+        ]
+    },
+    "Royal Guard Boots": {
+        "set": "ROYAL_GUARD_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "BOKOBLIN_GUTS": "3",
+                "BOSS_BOKOBLIN_HORN": "3"
+            },
+            {
+                "BLUE_BOSS_BOKOBLIN_HORN": "3",
+                "BOSS_BOKOBLIN_FANG": "3"
+            },
+            {
+                "BLACK_BOSS_BOKOBLIN_HORN": "3",
+                "HINOX_GUTS": "3"
+            },
+            {
+                "SILVER_BOSS_BOKOBLIN_HORN": "3",
+                "MOLDUGA_GUTS": "3",
+                "GLEEOK_GUTS": "3"
+            }
+        ]
+    },
+    "Royal Guard Uniform": {
+        "set": "ROYAL_GUARD_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "BOKOBLIN_GUTS": "3",
+                "BOSS_BOKOBLIN_HORN": "3"
+            },
+            {
+                "BLUE_BOSS_BOKOBLIN_HORN": "3",
+                "BOSS_BOKOBLIN_FANG": "3"
+            },
+            {
+                "BLACK_BOSS_BOKOBLIN_HORN": "3",
+                "HINOX_GUTS": "3"
+            },
+            {
+                "SILVER_BOSS_BOKOBLIN_HORN": "3",
+                "MOLDUGA_GUTS": "3",
+                "GLEEOK_GUTS": "3"
+            }
+        ]
+    },
+    "Evil Spirit Mask": {
+        "set": "EVIL_SPIRIT_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Evil Spirit Greaves": {
+        "set": "EVIL_SPIRIT_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Evil Spirit Armor": {
+        "set": "EVIL_SPIRIT_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {}
+        ]
+    },
+    "Vah Ruta Divine Helm": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "ZONAITE": "5",
+                "OPAL": "5"
+            },
+            {
+                "ZONAITE": "10",
+                "OPAL": "10"
+            },
+            {
+                "OPAL": "15",
+                "LARGE_ZONAITE": "5",
+                "DAZZLEFRUIT": "5"
+            },
+            {
+                "OPAL": "25",
+                "LARGE_ZONAITE": "10",
+                "DAZZLEFRUIT": "10"
+            }
+        ]
+    },
+    "Vah Medoh Divine Helm": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "SAPPHIRE": "1",
+                "ZONAITE": "5"
+            },
+            {
+                "SAPPHIRE": "4",
+                "ZONAITE": "10"
+            },
+            {
+                "SAPPHIRE": "6",
+                "LARGE_ZONAITE": "5",
+                "DAZZLEFRUIT": "5"
+            },
+            {
+                "SAPPHIRE": "10",
+                "LARGE_ZONAITE": "10",
+                "DAZZLEFRUIT": "10"
+            }
+        ]
+    },
+    "Vah Rudania Divine Helm": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "ZONAITE": "5",
+                "RUBY": "1"
+            },
+            {
+                "ZONAITE": "10",
+                "RUBY": "4"
+            },
+            {
+                "RUBY": "6",
+                "LARGE_ZONAITE": "5",
+                "DAZZLEFRUIT": "5"
+            },
+            {
+                "RUBY": "10",
+                "LARGE_ZONAITE": "10",
+                "DAZZLEFRUIT": "10"
+            }
+        ]
+    },
+    "Vah Naboris Divine Helm": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "TOPAZ": "1",
+                "ZONAITE": "5"
+            },
+            {
+                "TOPAZ": "4",
+                "ZONAITE": "10"
+            },
+            {
+                "TOPAZ": "6",
+                "LARGE_ZONAITE": "5",
+                "DAZZLEFRUIT": "5"
+            },
+            {
+                "TOPAZ": "10",
+                "LARGE_ZONAITE": "10",
+                "DAZZLEFRUIT": "10"
+            }
+        ]
+    },
+    "Cap of Time": {
+        "set": "TIME_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "AMBER": "10",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "AMBER": "20",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "AMBER": "30",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "AMBER": "40",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Trousers of Time": {
+        "set": "TIME_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "AMBER": "10",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "AMBER": "20",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "AMBER": "30",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "AMBER": "40",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Tunic of Time": {
+        "set": "TIME_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "AMBER": "10",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "AMBER": "20",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "AMBER": "30",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "AMBER": "40",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Cap of the Wind": {
+        "set": "WIND_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "OPAL": "5",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "OPAL": "10",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "OPAL": "15",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "OPAL": "25",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Trousers of the Wind": {
+        "set": "WIND_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "OPAL": "5",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "OPAL": "10",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "OPAL": "15",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "OPAL": "25",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Tunic of the Wind": {
+        "set": "WIND_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "OPAL": "5",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "OPAL": "10",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "OPAL": "15",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "OPAL": "25",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Cap of Twilight": {
+        "set": "TWILIGHT_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "TOPAZ": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "4",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "10",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Trousers of Twilight": {
+        "set": "TWILIGHT_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "TOPAZ": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "4",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "10",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Tunic of Twilight": {
+        "set": "TWILIGHT_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "TOPAZ": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "4",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "TOPAZ": "10",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Cap of the Sky": {
+        "set": "SKY_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "SAPPHIRE": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "4",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "10",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Trousers of the Sky": {
+        "set": "SKY_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "SAPPHIRE": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "4",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "10",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Tunic of the Sky": {
+        "set": "SKY_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "SAPPHIRE": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "4",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SAPPHIRE": "10",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Sheik's Mask": {
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "SILENT_PRINCESS": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "SILENT_PRINCESS": "2",
+                "STAR_FRAGMENT": "2"
+            },
+            {
+                "SILENT_PRINCESS": "4",
+                "STAR_FRAGMENT": "3"
+            },
+            {
+                "SILENT_PRINCESS": "8",
+                "STAR_FRAGMENT": "4"
+            }
+        ]
+    },
+    "Fierce Deity Mask": {
+        "set": "FIERCE_DEITY_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "HINOX_TOENAIL": "5",
+                "DINRAAL_S_SCALE": "1"
+            },
+            {
+                "HINOX_TOOTH": "5",
+                "DINRAAL_S_CLAW": "1"
+            },
+            {
+                "HINOX_GUTS": "2",
+                "SHARD_OF_DINRAAL_S_FANG": "1"
+            },
+            {
+                "LYNEL_GUTS": "2",
+                "DINRAAL_S_HORN": "1"
+            }
+        ]
+    },
+    "Fierce Deity Boots": {
+        "set": "FIERCE_DEITY_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "HINOX_TOENAIL": "5",
+                "DINRAAL_S_SCALE": "1"
+            },
+            {
+                "HINOX_TOOTH": "5",
+                "DINRAAL_S_CLAW": "1"
+            },
+            {
+                "HINOX_GUTS": "2",
+                "SHARD_OF_DINRAAL_S_FANG": "1"
+            },
+            {
+                "LYNEL_GUTS": "2",
+                "DINRAAL_S_HORN": "1"
+            }
+        ]
+    },
+    "Fierce Deity Armor": {
+        "set": "FIERCE_DEITY_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "HINOX_TOENAIL": "5",
+                "DINRAAL_S_SCALE": "1"
+            },
+            {
+                "HINOX_TOOTH": "5",
+                "DINRAAL_S_CLAW": "1"
+            },
+            {
+                "HINOX_GUTS": "2",
+                "SHARD_OF_DINRAAL_S_FANG": "1"
+            },
+            {
+                "LYNEL_GUTS": "2",
+                "DINRAAL_S_HORN": "1"
+            }
+        ]
+    },
+    "Cap of the Hero": {
+        "set": "HERO_SET",
+        "body_part": "HEAD",
+        "upgrades": [
+            {},
+            {
+                "RUBY": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "4",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "10",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Trousers of the Hero": {
+        "set": "HERO_SET",
+        "body_part": "LEGS",
+        "upgrades": [
+            {},
+            {
+                "RUBY": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "4",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "10",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    },
+    "Tunic of the Hero": {
+        "set": "HERO_SET",
+        "body_part": "BODY",
+        "upgrades": [
+            {},
+            {
+                "RUBY": "1",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "4",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "6",
+                "STAR_FRAGMENT": "1"
+            },
+            {
+                "RUBY": "10",
+                "STAR_FRAGMENT": "1"
+            }
+        ]
+    }
+}

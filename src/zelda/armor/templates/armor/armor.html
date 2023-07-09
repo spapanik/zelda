@@ -1,0 +1,54 @@
+{% extends "lib/base.html" %}
+
+{% block main_body %}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-10">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-center">Armor</th>
+                </tr>
+                <tr>
+                    <th scope="col">Armor</th>
+                    <th scope="col" class="text-end">Current level</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for name, current_level in armors.items %}
+                    <tr>
+                        <th scope="row">{{ name }}</th>
+                        <td class="text-end">{{ current_level }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-10">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-center">Remaining Cost</th>
+                </tr>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col" class="text-end">Quantity</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item, quantity in remaining_cost.items %}
+                    <tr>
+                        <th scope="row">{{ item }}</th>
+                        <td class="text-end">{{ quantity }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col"></div>
+    </div>
+{% endblock %}

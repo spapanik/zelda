@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from functools import total_ordering
 from typing import Any
 
 from django.db import models
@@ -28,6 +29,41 @@ class Armor(BaseModel):
                 name="unique_armor_set_body_part",
             ),
         ]
+
+    @total_ordering
+    class SortingKey:
+        def __init__(self, armor: Armor):
+            self.armor = armor
+
+        def __eq__(self, other: Any) -> bool:
+            if not isinstance(other, Armor.SortingKey):
+                return NotImplemented
+
+            return self.armor.id == other.armor.id
+
+        def __lt__(self, other: Any) -> bool:
+            if not isinstance(other, Armor.SortingKey):
+                return NotImplemented
+
+            if self.armor.id == other.armor.id:
+                return False
+
+            if self.armor.set_code and not other.armor.set_code:
+                return True
+
+            if not self.armor.set_code and other.armor.set_code:
+                return False
+
+            if not self.armor.set_code and not other.armor.set_code:
+                return self.armor.name < other.armor.name
+
+            if self.armor.set_code != other.armor.set_code:
+                return self.armor.set_code < other.armor.set_code  # type: ignore[operator]
+
+            return (
+                self.armor.body_part_code == BodyPart.HEAD.key
+                or other.armor.body_part_code == BodyPart.LEGS.key
+            )
 
     def __str__(self) -> str:
         return self.name

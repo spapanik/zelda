@@ -28,8 +28,8 @@ class ArmorView(BaseView):
         current_levels = dict(user.armor_levels.values_list("armor", "level"))
         remaining_cost = {item: 0 for item in Item.labels()}
         user_armor: dict[str, UserArmorDict] = {}
-        for armor in Armor.objects.prefetch_related("costs").order_by(
-            "set_code", "body_part_code"
+        for armor in sorted(
+            Armor.objects.prefetch_related("costs"), key=Armor.SortingKey
         ):
             current_level = current_levels.get(armor.id, -1)
             tooltip_info: dict[int, str] = {}

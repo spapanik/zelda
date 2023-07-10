@@ -3,6 +3,19 @@
 {% block main_body %}
     <div class="row">
         <div class="col"></div>
+        <div class="form-check form-switch col-10">
+            <label class="form-check-label" for="hide-completed">Hide completed</label>
+            <input type="checkbox"
+                   role="switch"
+                   id="hide-completed"
+                   class="form-check-input"
+                   onchange="saveMaxedOutPreference(this)"
+                    {% if hide_maxed_out %}checked{% endif %}>
+        </div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
         <div class="col-10">
             <form id="portToPort" action="{% url 'armor:update-armor' %}" method="post">
                 {% csrf_token %}
@@ -18,7 +31,8 @@
                     </thead>
                     <tbody>
                         {% for name, info in user_armor.items %}
-                            <tr>
+                            <tr class="armor-row"
+                                {% if info.current_level == info.max_level and hide_maxed_out %}hidden{% endif %}>
                                 <th scope="row">
                                     <label for="{{ name }}" title="{{ info.tooltip }}">
                                         {{ name }}
@@ -61,7 +75,8 @@
                 </thead>
                 <tbody>
                 {% for item, quantity in remaining_cost.items %}
-                    <tr>
+                    <tr class="cost-row"
+                        {% if quantity == 0 and hide_maxed_out %}hidden{% endif %}>
                         <th scope="row">{{ item }}</th>
                         <td class="text-end">{{ quantity }}</td>
                     </tr>

@@ -28,6 +28,7 @@ class ArmorView(BaseView):
         current_levels = dict(user.armor_levels.values_list("armor", "level"))
         remaining_cost = {item: 0 for item in Item.labels()}
         user_armor: dict[str, UserArmorDict] = {}
+        hide_maxed_out = self.request.COOKIES.get("hideMaxedOut", "true") == "true"
         for armor in sorted(
             Armor.objects.prefetch_related("costs"), key=Armor.SortingKey
         ):
@@ -54,6 +55,7 @@ class ArmorView(BaseView):
         return {
             "user_armor": user_armor,
             "remaining_cost": remaining_cost,
+            "hide_maxed_out": hide_maxed_out,
         }
 
 

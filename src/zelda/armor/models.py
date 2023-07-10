@@ -39,7 +39,7 @@ class Armor(BaseModel):
 
     @property
     def armor_set(self) -> str:
-        return ArmorSet[self.set_code].label
+        return ArmorSet[self.set_code].label if self.set_code else ""
 
     @property
     def body_part(self) -> str:

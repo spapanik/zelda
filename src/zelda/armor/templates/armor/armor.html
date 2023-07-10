@@ -4,25 +4,45 @@
     <div class="row">
         <div class="col"></div>
         <div class="col-10">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col" class="text-center" colspan="2">Armor</th>
-                </tr>
-                <tr>
-                    <th scope="col">Armor</th>
-                    <th scope="col" class="text-end">Current level</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for name, current_level in armors.items %}
-                    <tr>
-                        <th scope="row">{{ name }}</th>
-                        <td class="text-end">{{ current_level }}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+            <form id="portToPort" action="{% url 'armor:update-armor' %}" method="post">
+                {% csrf_token %}
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center" colspan="2">Armor</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Armor</th>
+                            <th scope="col" class="text-end">Current level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for name, info in user_armor.items %}
+                            <tr>
+                                <th scope="row">
+                                    <label for="{{ name }}">
+                                        {{ name }}
+                                    </label>
+                                </th>
+                                <td class="text-end">
+                                    <input type="number"
+                                           class="form-control"
+                                           name="{{ name }}"
+                                           placeholder="Not purchased"
+                                           min="0"
+                                           max="{{ info.max_level }}"
+                                           value="{{ info.current_level }}">
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <button class="btn btn-block btn-primary mt-2">Update</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
         </div>
         <div class="col"></div>
     </div>

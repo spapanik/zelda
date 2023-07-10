@@ -2,8 +2,12 @@ from typing import Any
 
 from django.forms import BaseForm
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views import View
+
+
+class LoginRequiredError(RuntimeError):
+    pass
 
 
 class BaseView(View):
@@ -22,7 +26,10 @@ class BaseView(View):
     def get(
         self, request: HttpRequest, *_args: Any, **kwargs: Any  # noqa: ARG002
     ) -> HttpResponse:
-        context = self.get_context_data(**kwargs)
+        try:
+            context = self.get_context_data(**kwargs)
+        except LoginRequiredError:
+            return redirect("login")
         return self.render(context)
 
 

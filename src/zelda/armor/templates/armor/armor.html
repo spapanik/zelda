@@ -20,7 +20,7 @@
                         {% for name, info in user_armor.items %}
                             <tr>
                                 <th scope="row">
-                                    <label for="{{ name }}">
+                                    <label for="{{ name }}" title="{{ info.tooltip }}">
                                         {{ name }}
                                     </label>
                                 </th>

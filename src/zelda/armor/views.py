@@ -3,6 +3,7 @@ from typing import Any, Literal, TypedDict
 from django.http.request import HttpRequest
 from django.http.response import HttpResponse
 from django.shortcuts import redirect
+from django.utils.safestring import mark_safe
 from django.views.generic import TemplateView
 
 from zelda.armor.models import Armor, UserArmor
@@ -13,6 +14,7 @@ from zelda.lib.views import BaseView, LoginRequiredError
 class UserArmorDict(TypedDict):
     current_level: int | Literal[""]
     max_level: int
+    tooltip: str
 
 
 class ArmorView(BaseView):
@@ -30,12 +32,25 @@ class ArmorView(BaseView):
             "set_code", "body_part_code"
         ):
             current_level = current_levels.get(armor.id, -1)
+            tooltip_info: dict[int, str] = {}
+            for cost in armor.costs.filter(level__gt=current_level):
+                remaining_cost[cost.item] += cost.quantity
+                tooltip_info.setdefault(cost.level, "")
+                tooltip_info[cost.level] += f" {cost.quantity}x {cost.item}"
+            if armor.max_level == current_level:
+                tooltip = "Maxed out"
+            elif tooltip_info:
+                tooltip = "&#10;".join(
+                    f"{level}: {level_tooltip.strip()}"
+                    for level, level_tooltip in tooltip_info.items()
+                )
+            else:
+                tooltip = "Free to upgrade"
             user_armor[armor.name] = {
                 "current_level": current_level if current_level >= 0 else "",
                 "max_level": armor.max_level,
+                "tooltip": mark_safe(tooltip),  # noqa: S308
             }
-            for cost in armor.costs.filter(level__gt=current_level):
-                remaining_cost[cost.item] += cost.quantity
         return {
             "user_armor": user_armor,
             "remaining_cost": remaining_cost,

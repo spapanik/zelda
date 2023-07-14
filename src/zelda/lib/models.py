@@ -7,7 +7,7 @@ from django.db import models
 from zelda.lib.date_utils import now
 from zelda.lib.types import OnDeleteType
 
-_T = TypeVar("_T", bound=models.Model, covariant=True)
+_T_co = TypeVar("_T_co", bound=models.Model, covariant=True)
 _ST = TypeVar("_ST")
 _GT = TypeVar("_GT")
 
@@ -49,16 +49,16 @@ class OneToOneField(models.OneToOneField[_ST, _GT]):
         super().__init__(to, on_delete, to_field=to_field, **kwargs)
 
 
-class BaseQuerySet(models.QuerySet[_T]):
+class BaseQuerySet(models.QuerySet[_T_co]):
     def bulk_create(
         self,
-        objs: Iterable[_T],
+        objs: Iterable[_T_co],
         batch_size: int | None = None,
         ignore_conflicts: bool = False,  # noqa: FBT001,FBT002
         update_conflicts: bool = False,  # noqa: FBT001,FBT002
         update_fields: Collection[str] | None = None,
         unique_fields: Collection[str] | None = None,
-    ) -> list[_T]:
+    ) -> list[_T_co]:
         dt = now()
         for obj in objs:
             obj.updated_at = dt  # type: ignore[attr-defined]
@@ -73,7 +73,10 @@ class BaseQuerySet(models.QuerySet[_T]):
         )
 
     def bulk_update(
-        self, objs: Iterable[_T], fields: Iterable[str], batch_size: int | None = None
+        self,
+        objs: Iterable[_T_co],
+        fields: Iterable[str],
+        batch_size: int | None = None,
     ) -> int:
         dt = now()
         for obj in objs:
@@ -82,10 +85,10 @@ class BaseQuerySet(models.QuerySet[_T]):
             fields = [*fields, "updated_at"]
         return super().bulk_update(objs, fields, batch_size)
 
-    def flat_values(self, key: str) -> models.QuerySet[_T]:
-        return cast(models.QuerySet[_T], self.values_list(key, flat=True))
+    def flat_values(self, key: str) -> models.QuerySet[_T_co]:
+        return cast(models.QuerySet[_T_co], self.values_list(key, flat=True))
 
-    def random(self) -> _T | None:
+    def random(self) -> _T_co | None:
         return self.order_by("?").first()
 
     def update(self, **kwargs: Any) -> int:

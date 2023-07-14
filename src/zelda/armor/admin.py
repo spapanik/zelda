@@ -17,7 +17,7 @@ class ArmorAdmin(admin.ModelAdmin[Armor]):
 class ArmorUpgradeCostAdmin(admin.ModelAdmin[ArmorUpgradeCost]):
     list_display = ["name", "armor", "armor_set"]
     ordering = ["id"]
-    search_fields = ["armor"]
+    search_fields = ["armor__name"]
     list_filter = ["armor", "item_code"]
 
     @admin.display(ordering="id", description="Cost name")

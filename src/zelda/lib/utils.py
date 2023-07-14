@@ -13,18 +13,18 @@ from pathurl import URL, Query
 logger = logging.getLogger(__name__)
 INGEST_ERROR = "Function `%s` threw `%s` when called with args=%s and kwargs=%s"
 P = ParamSpec("P")
-R = TypeVar("R", covariant=True)
+R_co = TypeVar("R_co", covariant=True)
 
 
 def handle_exceptions(
     *,
     exceptions: tuple[type[Exception], ...] = (Exception,),
-    default: R | None = None,
+    default: R_co | None = None,
     log_level: str = "info",
-) -> Callable[[Callable[P, R]], Callable[P, R | None]]:
-    def decorator(func: Callable[P, R]) -> Callable[P, R | None]:
+) -> Callable[[Callable[P, R_co]], Callable[P, R_co | None]]:
+    def decorator(func: Callable[P, R_co]) -> Callable[P, R_co | None]:
         @wraps(func)
-        def wrapper(*args: P.args, **kwargs: P.kwargs) -> R | None:
+        def wrapper(*args: P.args, **kwargs: P.kwargs) -> R_co | None:
             try:
                 return func(*args, **kwargs)
             except exceptions as exc:

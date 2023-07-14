@@ -5,10 +5,11 @@ from functools import wraps
 from pathlib import Path
 from typing import ParamSpec, TypeVar
 
+from pathurl import URL, Query
+
 from django.conf import settings
 from django.db.migrations.loader import MigrationLoader
 from django.db.migrations.writer import MigrationWriter
-from pathurl import URL, Query
 
 logger = logging.getLogger(__name__)
 INGEST_ERROR = "Function `%s` threw `%s` when called with args=%s and kwargs=%s"

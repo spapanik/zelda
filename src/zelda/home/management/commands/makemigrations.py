@@ -11,14 +11,15 @@ from zelda.lib.utils import hash_migrations
 
 
 class Command(MakeMigrations):
-    help = "Creates new migration(s) for apps."  # noqa: A003
+    help = "Creates new migration(s) for apps."
 
     def add_arguments(self, parser: CommandParser) -> None:
         super().add_arguments(parser)
 
     def handle(self, *args: Any, **options: Any) -> None:
         if not settings.DEBUG:
-            raise CommandError("Creating new migrations is only allowed in development")
+            msg = "Creating new migrations is only allowed in development"
+            raise CommandError(msg)
 
         options["include_header"] = False
         super().handle(*args, **options)
@@ -28,11 +29,17 @@ class Command(MakeMigrations):
 
     def format_migration(self, migration: Migration) -> None:
         writer = MigrationWriter(migration, self.include_header)
-        subprocess.run(["black", writer.path])  # noqa: S603,S607
-        subprocess.run(["ruff", "--fix-only", writer.path])  # noqa: S603,S607
+        subprocess.run(["black", writer.path], check=True)  # noqa: S603,S607
+        subprocess.run(
+            ["ruff", "check", "--fix-only", writer.path], check=True  # noqa: S603,S607
+        )
 
-    def write_migration_files(self, changes: dict[str, list[Migration]]) -> None:
-        super().write_migration_files(changes)
+    def write_migration_files(
+        self,
+        changes: dict[str, list[Migration]],
+        update_previous_migration_paths: dict[str, str] | None = None,
+    ) -> None:
+        super().write_migration_files(changes, update_previous_migration_paths)
         if self.dry_run:
             return
 

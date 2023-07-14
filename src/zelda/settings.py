@@ -3,11 +3,11 @@ import pathlib
 from functools import partial
 
 import django_stubs_ext
-from dj_settings.utils import setting
+from dj_settings import get_setting
 
 BASE_DIR = pathlib.Path(__file__).parents[2]
 PROJECT_DIR = BASE_DIR.joinpath("src")
-project_setting = partial(setting, base_dir=BASE_DIR, filename="zelda.yml")
+project_setting = partial(get_setting, project_dir=BASE_DIR, filename="zelda.yml")
 django_stubs_ext.monkeypatch()
 
 # region Security
@@ -46,7 +46,10 @@ BASE_DOMAIN = project_setting(
 BASE_PORT = project_setting(
     "BASE_PORT", sections=["project", "servers"], rtype=int, default=8000
 )
-ALLOWED_HOSTS = [BASE_DOMAIN]
+EXTRA_DOMAINS = project_setting(
+    "EXTRA_DOMAINS", sections=["project", "servers"], rtype=list, default=["127.0.0.1"]
+)
+ALLOWED_HOSTS = [BASE_DOMAIN, *EXTRA_DOMAINS]
 
 AUTH_USER_MODEL = "registration.User"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -141,11 +144,6 @@ STATIC_ROOT = BASE_DIR.joinpath(".static")
 # region i18n/l10n
 LANGUAGE_CODE = "en"
 LANGUAGES = [("en", "English")]
-
-LOCALE_PATHS = [BASE_DIR.joinpath("locale")]
-
-TIME_ZONE = "UTC"
-USE_TZ = True
 # endregion
 
 # region 3rd party

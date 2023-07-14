@@ -10,7 +10,7 @@ DEFAULT_PASSWORD = "zelda"  # noqa: S105
 def create_initial_superuser(
     apps: Apps, _schema_editor: BaseDatabaseSchemaEditor
 ) -> None:
-    User = apps.get_model("registration", "User")  # noqa: N806
+    User = apps.get_model("registration", "User")
 
     user, created = User.objects.get_or_create(email=DEFAULT_EMAIL)
     if created:
@@ -23,7 +23,7 @@ def create_initial_superuser(
 def drop_initial_superuser(
     apps: Apps, _schema_editor: BaseDatabaseSchemaEditor
 ) -> None:
-    User = apps.get_model("registration", "User")  # noqa: N806
+    User = apps.get_model("registration", "User")
 
     User.objects.filter(email=DEFAULT_EMAIL).delete()
 

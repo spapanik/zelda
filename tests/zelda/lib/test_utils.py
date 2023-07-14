@@ -3,6 +3,7 @@ from collections import defaultdict
 from pathlib import Path
 
 import pytest
+
 from django.test import override_settings
 
 from zelda.lib import utils

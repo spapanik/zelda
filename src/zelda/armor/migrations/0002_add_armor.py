@@ -14,8 +14,8 @@ FAIRY_TAX = {
 
 
 def create_armor(apps: Apps, _schema_editor: BaseDatabaseSchemaEditor) -> None:
-    Armor = apps.get_model("armor", "Armor")  # noqa: N806
-    ArmorUpgradeCost = apps.get_model("armor", "ArmorUpgradeCost")  # noqa: N806
+    Armor = apps.get_model("armor", "Armor")
+    ArmorUpgradeCost = apps.get_model("armor", "ArmorUpgradeCost")
 
     armor_definitions = settings.PROJECT_DIR.joinpath(
         "zelda", "armor", "data", "armor.json"
@@ -47,8 +47,8 @@ def create_armor(apps: Apps, _schema_editor: BaseDatabaseSchemaEditor) -> None:
 
 
 def drop_armor(apps: Apps, _schema_editor: BaseDatabaseSchemaEditor) -> None:
-    Armor = apps.get_model("armor", "Armor")  # noqa: N806
-    ArmorUpgradeCost = apps.get_model("armor", "ArmorUpgradeCost")  # noqa: N806
+    Armor = apps.get_model("armor", "Armor")
+    ArmorUpgradeCost = apps.get_model("armor", "ArmorUpgradeCost")
 
     Armor.objects.all().delete()
     ArmorUpgradeCost.objects.all().delete()

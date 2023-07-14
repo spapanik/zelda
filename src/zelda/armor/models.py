@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from functools import total_ordering
-from typing import Any
+from typing import Any, ClassVar
 
 from django.db import models
 
@@ -18,12 +18,12 @@ class Armor(BaseModel):
     body_part_code = models.CharField(max_length=255, choices=BodyPart.choices())
     max_level = models.PositiveSmallIntegerField()
 
-    objects: models.Manager[Armor]
-    costs: models.Manager[ArmorUpgradeCost]
-    user_levels: models.Manager[UserArmor]
+    objects: ClassVar[models.Manager[Armor]]
+    costs: ClassVar[models.Manager[ArmorUpgradeCost]]
+    user_levels: ClassVar[models.Manager[UserArmor]]
 
     class Meta:
-        constraints = [
+        constraints: ClassVar[list[models.UniqueConstraint]] = [
             models.UniqueConstraint(
                 fields=["set_code", "body_part_code"],
                 name="unique_armor_set_body_part",
@@ -88,10 +88,10 @@ class ArmorUpgradeCost(BaseModel):
     quantity = models.PositiveSmallIntegerField()
     item_code = models.CharField(max_length=255, choices=Item.choices(), blank=True)
 
-    objects: models.Manager[ArmorUpgradeCost]
+    objects: ClassVar[models.Manager[ArmorUpgradeCost]]
 
     class Meta:
-        constraints = [
+        constraints: ClassVar[list[models.UniqueConstraint]] = [
             models.UniqueConstraint(
                 fields=["armor", "level", "item_code"],
                 name="unique_level_upgrade_cost",
@@ -124,4 +124,4 @@ class UserArmor(BaseModel):
     armor = ForeignKey(Armor, related_name="user_levels")
     level = models.PositiveSmallIntegerField()
 
-    objects: models.Manager[UserArmor]
+    objects: ClassVar[models.Manager[UserArmor]]

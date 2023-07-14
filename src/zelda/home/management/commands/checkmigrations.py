@@ -10,7 +10,7 @@ from zelda.lib.utils import hash_migrations
 
 
 class Command(MakeMigrations):
-    help = "Check if migrations are as expected"  # noqa: A003
+    help = "Check if migrations are as expected"
 
     def add_arguments(self, parser: CommandParser) -> None:
         pass
@@ -21,7 +21,8 @@ class Command(MakeMigrations):
         with settings.MIGRATION_HASHES_PATH.open() as file:
             saved_hashes = [line.strip() for line in file.readlines()]
         if actual_hashes != saved_hashes:
-            raise CommandError("Migration hashes have changed!")
+            msg = "Migration hashes have changed!"
+            raise CommandError(msg)
 
     @staticmethod
     def check_naming() -> None:
@@ -32,16 +33,19 @@ class Command(MakeMigrations):
             try:
                 migration_number = int(node[1].lstrip("0").split("_")[0])
             except (IndexError, ValueError) as exc:
-                raise CommandError(f"Migration {node[1]} has an invalid name") from exc
+                msg = f"Migration {node[1]} has an invalid name"
+                raise CommandError(msg) from exc
             app_migrations[node[0]].append(migration_number)
 
         for app_name, migration_numbers in app_migrations.items():
             n = len(migration_numbers)
             if len(set(migration_numbers)) != n:
-                raise CommandError(f"Two migrations in {app_name} have the same prefix")
+                msg = f"Two migrations in {app_name} have the same prefix"
+                raise CommandError(msg)
             migration_numbers.sort()
             if migration_numbers[-1] != n:
-                raise CommandError(f"There is a skipped prefix in {app_name}")
+                msg = f"There is a skipped prefix in {app_name}"
+                raise CommandError(msg)
 
     def handle(self, *args: Any, **options: Any) -> None:
         options["check_changes"] = True

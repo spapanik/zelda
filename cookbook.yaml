@@ -1,0 +1,204 @@
+$globals:
+  shell: bash
+  version: "6.0"
+  vars:
+    DJANGO_SETTINGS_MODULE: zelda.settings
+    runner: poetry run
+    env_vars: DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE}
+    admin: ${env_vars} ${runner} django-admin
+    PGDATABASE: zelda
+    cert_file: local/.ssl/certs/localhost.crt
+    key_file: local/.ssl/keys/localhost.key
+    runserver_extra: --cert-file ${cert_file} --key-file ${key_file}
+    webserver_host: 0.0.0.0
+    webserver_port: "8000"
+    shell_plus_extra: --quiet-load
+    static_verbosity: "0"
+    poetry_sync: --sync
+    input: --no-input
+    css_style: expanded
+    css_map: --no-source-map
+    css_dir: src/zelda/lib/static/lib/css
+    js_dir: src/zelda/lib/static/lib/js
+    img_files: $((glob **/static/*/img/*))
+
+update:
+  alias: install
+
+install_state:
+  phony: true
+  keep_ts: true
+  requires:
+    - migrations
+
+install_code:
+  phony: true
+  keep_ts: true
+  requires:
+    - install_py
+    - static
+
+install:
+  phony: true
+  keep_ts: true
+  requires:
+    - install_code
+    - install_state
+
+format:
+  phony: true
+  requires:
+    - format_py
+    - format_js
+
+lint:
+  phony: true
+  requires:
+    - lint_py
+    - lint_js
+  commands:
+    - $(pwd)/enforce_eol.py
+
+runserver:
+  phony: true
+  requires:
+    - install
+  commands:
+    - ${admin} runserver_plus ${webserver_host}:${webserver_port} ${runserver_extra}
+
+shell:
+  phony: true
+  requires:
+    - install
+  commands:
+    - "${admin} shell_plus ${shell_plus_extra}"
+
+install_py:
+  phony: true
+  keep_ts: true
+  requires:
+    - poetry.lock
+  commands:
+    - "poetry install ${poetry_sync} ${poetry_extra}"
+
+format_py:
+  phony: true
+  requires:
+    - install_py
+  commands:
+    - "${runner} ruff check --fix-only ."
+    - "${runner} black ."
+
+lint_py:
+  phony: true
+  requires:
+    - install_py
+  commands:
+    - "${runner} poetry check --lock"
+    - "${runner} ruff check ."
+    - "${runner} black --check ."
+    - "${runner} mypy ."
+    - "${admin} checkmigrations"
+    - "${admin} check"
+
+install_js:
+  phony: true
+  keep_ts: true
+  requires:
+    - package-lock.json
+  commands:
+    - npm ci ${npm_extra}
+
+format_js:
+  phony: true
+  requires:
+    - install_js
+  commands:
+    - npm run format
+
+lint_js:
+  phony: true
+  requires:
+    - install_js
+  commands:
+    - npm run lint
+
+tests:
+  phony: true
+  requires:
+    - install
+  commands:
+    - "${env_vars} ${runner} pytest ${pytest_args} ${pytest_path} ${.extra}"
+
+poetry.lock:
+  update: true
+  requires:
+    - pyproject.toml
+  commands:
+    - poetry lock
+
+db:
+  phony: true
+  keep_ts: true
+  exists_only: true
+  existence_command: '[ $(psql -d ${db_base} -tAXc "${db_exists}") = "t" ]'
+  commands:
+    - "createdb ${PGDATABASE}"
+  vars:
+    db_exists: "SELECT EXISTS (SELECT 1 FROM pg_database WHERE datname = '${PGDATABASE}')"
+    db_base: template1
+
+migrations:
+  phony: true
+  keep_ts: true
+  requires:
+    - install_py
+    - db
+    - migrations.lock
+  commands:
+    - "${admin} migrate ${input}"
+
+package-lock.json:
+  update: true
+  requires:
+    - package.json
+  commands:
+    - npm install --package-lock-only
+
+${js_dir}/base.js:
+  regex: true
+  requires:
+    - ${js_dir}/base.ts
+  commands:
+    - npm run tsc
+
+js:
+  phony: true
+  keep_ts: true
+  requires:
+    - ${js_dir}/base.js
+
+${css_dir}/base.css:
+  regex: true
+  requires:
+    - ${css_dir}/base.scss
+  commands:
+    - npm run sass -- -s ${css_style} ${css_map} ${.requirements:0} ${.target}
+
+css:
+  phony: true
+  keep_ts: true
+  requires:
+    - ${css_dir}/base.css
+
+static:
+  phony: true
+  keep_ts: true
+  requires:
+    - install_py
+    - install_js
+    - ${img_files}
+    - css
+    - js
+  commands:
+    - ${admin} collectstatic ${input} -v ${static_verbosity} -i "*.scss" -i "*.ts" ${static_extra}

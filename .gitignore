@@ -15,7 +15,7 @@ __pycache__/
 /.static/
 
 # local dev
-/cookbook.toml.d/
+/cookbook.yaml.d/
 /zelda.yml
 local.*
 local/

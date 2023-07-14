@@ -49,7 +49,8 @@ def add_timezone(dt: datetime, tz_info: tzinfo = UTC) -> datetime:
     Raise an error in case of a tz-aware datetime
     """
     if dt.tzinfo is not None:
-        raise ValueError(f"{dt} is already tz-aware")
+        msg = f"{dt} is already tz-aware"
+        raise ValueError(msg)
     return dt.replace(tzinfo=tz_info)
 
 
@@ -60,5 +61,6 @@ def convert_timezone(dt: datetime, tz_info: tzinfo = UTC) -> datetime:
     Raise an error in case of a naive datetime
     """
     if dt.tzinfo is None:
-        raise ValueError(f"{dt} is a naive datetime")
+        msg = f"{dt} is a naive datetime"
+        raise ValueError(msg)
     return dt.astimezone(tz_info)

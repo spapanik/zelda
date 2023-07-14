@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import subprocess
 import sys
+import warnings
 from collections.abc import Iterator
 from pathlib import Path
 from traceback import print_exc
@@ -11,15 +12,18 @@ def assert_eol_characters(filename: Path) -> None:
     if size == 0:
         return
     if size == 1:
-        raise ValueError(f"File {filename} contains only a single character")
+        msg = f"File {filename} contains only a single character"
+        raise ValueError(msg)
     with filename.open("rb+") as file:
         file.seek(-2, 2)
         penultimate, last = file.read(2)
     newline = ord("\n")
     if last != newline:
-        raise ValueError(f"File {filename} doesn't end with a \\n character")
+        msg = f"File {filename} doesn't end with a \\n character"
+        raise ValueError(msg)
     if penultimate == newline:
-        raise ValueError(f"File {filename} ends with multiple \\n characters")
+        msg = f"File {filename} ends with multiple \\n characters"
+        raise ValueError(msg)
 
 
 def gather_files() -> Iterator[Path]:
@@ -41,6 +45,12 @@ def main() -> None:
         except ValueError:
             print_exc(limit=0)
             failed = True
+        except FileNotFoundError:
+            warnings.warn(
+                f"File {file} not found. If it was recently deleted, please stage it first.",
+                RuntimeWarning,
+                stacklevel=3,
+            )
     if failed:
         sys.exit(1)
 

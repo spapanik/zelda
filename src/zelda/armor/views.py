@@ -23,7 +23,8 @@ class ArmorView(BaseView):
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:  # noqa: ARG002
         user = self.request.user
         if user.is_anonymous:
-            raise LoginRequiredError("User must be logged in to view armor")
+            msg = "User must be logged in to view armor"
+            raise LoginRequiredError(msg)
 
         current_levels = dict(user.armor_levels.values_list("armor", "level"))
         remaining_cost = {item: 0 for item in Item.labels()}
@@ -64,7 +65,8 @@ class UpdateArmorView(TemplateView):
     def post(request: HttpRequest, *_args: Any, **_kwargs: Any) -> HttpResponse:
         user = request.user
         if user.is_anonymous:
-            raise LoginRequiredError("User must be logged in to update armor")
+            msg = "User must be logged in to update armor"
+            raise LoginRequiredError(msg)
 
         data = request.POST
         current_levels = dict(user.armor_levels.values_list("armor", "level"))

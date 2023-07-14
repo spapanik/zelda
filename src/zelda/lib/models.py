@@ -1,5 +1,5 @@
 from collections.abc import Collection, Iterable
-from typing import Any, Self, TypeVar, cast
+from typing import Any, ClassVar, Self, TypeVar, cast
 from uuid import uuid4
 
 from django.db import models
@@ -101,7 +101,7 @@ class BaseModel(models.Model):
     created_at = models.DateTimeField(default=now, editable=False)
     updated_at = models.DateTimeField(default=now, editable=False)
 
-    objects: models.Manager[Self] = BaseQuerySet.as_manager()
+    objects: ClassVar[models.Manager[Self]] = BaseQuerySet.as_manager()
 
     def save(self, *args: Any, **kwargs: Any) -> None:
         self.updated_at = now()

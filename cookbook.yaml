@@ -7,9 +7,10 @@ $globals:
     env_vars: DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE}
     admin: ${env_vars} ${runner} django-admin
     PGDATABASE: zelda
-    cert_file: local/.ssl/certs/localhost.crt
-    key_file: local/.ssl/keys/localhost.key
-    runserver_extra: --cert-file ${cert_file} --key-file ${key_file}
+    key_file: .ssl/keys/localhost.key
+    cert_file: .ssl/certs/localhost.crt
+    key_file_option: --key-file ${key_file}
+    cert_file_option: --cert-file ${cert_file}
     webserver_host: 0.0.0.0
     webserver_port: "8000"
     shell_plus_extra: --quiet-load
@@ -64,7 +65,7 @@ runserver:
   requires:
     - install
   commands:
-    - ${admin} runserver_plus ${webserver_host}:${webserver_port} ${runserver_extra}
+    - ${admin} runserver_plus ${webserver_host}:${webserver_port} ${key_file_option} ${cert_file_option} ${runserver_extra}
 
 shell:
   phony: true

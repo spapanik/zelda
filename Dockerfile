@@ -13,5 +13,5 @@ WORKDIR ${WEBSERVER}
 
 RUN yam install_code
 
-CMD yam -bf -r5 migrations && \
+CMD yam -bf migrations && \
     yam -bf runserver

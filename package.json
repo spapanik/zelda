@@ -1,26 +1,43 @@
 {
+    "$schema": "https://json.schemastore.org/package",
     "name": "zelda",
-    "version": "0.1.0",
     "private": true,
+    "version": "0.1.0",
     "description": "Zelda armor app",
     "authors": [
         "Stephanos Kuma <stephanos@kuma.ai>"
     ],
+    "type": "module",
     "scripts": {
-        "format": "prettier --list-different --write \"src/**/*.{ts,scss}\"",
-        "lint": "prettier --check \"src/**/*.{ts,scss}\" && eslint --max-warnings 0 --ext .ts src/ && tsc --noEmit",
+        "format": "prettier --list-different --write .",
+        "lint:prettier": "prettier --check .",
+        "lint:eslint": "eslint --max-warnings 0 \"**/*.ts\"",
+        "lint:types": "tsc --noEmit",
+        "lint": "pnpm run lint:prettier && pnpm run lint:eslint && pnpm run lint:types",
         "sass": "sass",
         "tsc": "tsc"
     },
-    "dependencies": {
-        "sass": "^1.58.3",
-        "typescript": "^4.9.5"
-    },
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.53.0",
-        "@typescript-eslint/parser": "^5.53.0",
-        "eslint": "^8.16.0",
-        "eslint-config-prettier": "^8.3.0",
-        "prettier": "^2.6.2"
+        "@typescript-eslint/eslint-plugin": "^7.8.0",
+        "@typescript-eslint/parser": "^7.8.0",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.2.5",
+        "sass": "^1.75.0",
+        "typescript": "^5.2.2"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "eslint:recommended",
+            "plugin:@typescript-eslint/recommended"
+        ],
+        "parserOptions": {
+            "ecmaVersion": "latest"
+        },
+        "ignorePatterns": [
+            "node_modules",
+            "dist"
+        ]
     }
 }

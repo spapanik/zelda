@@ -25,7 +25,7 @@
             }
         ]
     },
-     "Hylian Trousers": {
+    "Hylian Trousers": {
         "set": "HYLIAN_SET",
         "body_part": "LEGS",
         "upgrades": [
@@ -760,9 +760,7 @@
     },
     "Bokoblin Mask": {
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Diamond Circlet": {
         "body_part": "HEAD",
@@ -1205,22 +1203,16 @@
     "Archaic Legwear": {
         "set": "ARCHAIC_SET",
         "body_part": "LEGS",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Archaic Tunic": {
         "set": "ARCHAIC_SET",
         "body_part": "BODY",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Archaic Warm Greaves": {
         "body_part": "LEGS",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Froggy Hood": {
         "set": "FROGGY_SET",
@@ -1581,9 +1573,7 @@
     },
     "Cece Hat": {
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Mystic Headpiece": {
         "set": "MYSTIC_SET",
@@ -1869,15 +1859,11 @@
     },
     "Well-Worn Hair Band": {
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Lightning Helm": {
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Tunic of Memories": {
         "body_part": "BODY",
@@ -2028,80 +2014,56 @@
     "Phantom Helmet": {
         "set": "PHANTOM_SET",
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Phantom Greaves": {
         "set": "PHANTOM_SET",
         "body_part": "LEGS",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Phantom Armor": {
         "set": "PHANTOM_SET",
         "body_part": "BODY",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Majora's Mask": {
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Midna's Helmet": {
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Tingle's Hood": {
         "set": "TINGLE_SET",
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Tingle's Tights": {
         "set": "TINGLE_SET",
         "body_part": "LEGS",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Tingle's Shirt": {
         "set": "TINGLE_SET",
         "body_part": "BODY",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Island Lobster Shirt": {
         "body_part": "BODY",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Korok Mask": {
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Ravio's Hood": {
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Zant's Helmet": {
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Royal Guard Cap": {
         "set": "ROYAL_GUARD_SET",
@@ -2178,23 +2140,17 @@
     "Evil Spirit Mask": {
         "set": "EVIL_SPIRIT_SET",
         "body_part": "HEAD",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Evil Spirit Greaves": {
         "set": "EVIL_SPIRIT_SET",
         "body_part": "LEGS",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Evil Spirit Armor": {
         "set": "EVIL_SPIRIT_SET",
         "body_part": "BODY",
-        "upgrades": [
-            {}
-        ]
+        "upgrades": [{}]
     },
     "Vah Ruta Divine Helm": {
         "body_part": "HEAD",

@@ -1,20 +1,5 @@
-# cache
-__pycache__/
-.mypy_cache/
-.pytest_cache/
-.ruff_cache/
-.cov_cache/
+# auto-generated files
+pnpm-lock.yaml
 
-# installation artifacts
-.yamk/
-/node_modules/
-
-# static
-/.static/
-package-lock.json
-
-# local dev
-/cookbook.toml.d/
-/zelda.yml
-local.*
-local/
+# django templates
+src/zelda/*/templates/*/*.html

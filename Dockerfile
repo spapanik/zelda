@@ -1,4 +1,4 @@
-FROM spapanik/django-app:2.1.0
+FROM spapanik/django-app:2.2.0
 
 ENV WEBSERVER="/home/${DJANGO_USER}/zelda"
 ENV PYTHONBREAKPOINT=ipdb.set_trace

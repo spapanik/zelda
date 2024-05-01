@@ -106,23 +106,23 @@ install_js:
   phony: true
   keep_ts: true
   requires:
-    - package-lock.json
+    - pnpm-lock.yaml
   commands:
-    - npm ci ${npm_extra}
+    - pnpm install --frozen-lockfile ${pnpm_extra}
 
 format_js:
   phony: true
   requires:
     - install_js
   commands:
-    - npm run format
+    - pnpm run format
 
 lint_js:
   phony: true
   requires:
     - install_js
   commands:
-    - npm run lint
+    - pnpm run lint
 
 tests:
   phony: true
@@ -159,19 +159,19 @@ migrations:
   commands:
     - "${admin} migrate ${input}"
 
-package-lock.json:
+pnpm-lock.yaml:
   update: true
   requires:
     - package.json
   commands:
-    - npm install --package-lock-only
+    - pnpm install --lockfile-only
 
 ${js_dir}/base.js:
   regex: true
   requires:
     - ${js_dir}/base.ts
   commands:
-    - npm run tsc
+    - pnpm run tsc
 
 js:
   phony: true
@@ -184,7 +184,7 @@ ${css_dir}/base.css:
   requires:
     - ${css_dir}/base.scss
   commands:
-    - npm run sass -- -s ${css_style} ${css_map} ${.requirements:0} ${.target}
+    - pnpm run sass -s ${css_style} ${css_map} ${.requirements:0} ${.target}
 
 css:
   phony: true

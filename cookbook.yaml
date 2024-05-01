@@ -9,8 +9,10 @@ $globals:
     PGDATABASE: zelda
     key_file: .ssl/keys/localhost.key
     cert_file: .ssl/certs/localhost.crt
-    key_file_option: --key-file ${key_file}
-    cert_file_option: --cert-file ${cert_file}
+    key_file_option: --ssl-keyfile ${key_file}
+    cert_file_option: --ssl-certfile ${cert_file}
+    worker_options: --reload --lifespan off
+    worker_class: zelda.lib.workers.UvicornWorker
     webserver_host: 0.0.0.0
     webserver_port: "8000"
     shell_plus_extra: --quiet-load
@@ -65,7 +67,20 @@ runserver:
   requires:
     - install
   commands:
-    - ${admin} runserver_plus ${webserver_host}:${webserver_port} ${key_file_option} ${cert_file_option} ${runserver_extra}
+    - >-
+      ${env_vars} ${runner}
+      uvicorn
+      ${key_file_option}
+      ${cert_file_option}
+      --host ${webserver_host}
+      --port ${webserver_port}
+      --reload-include "zelda.yml"
+      --reload-include "**/templates/**/*.html"
+      --reload-include "**/static/*/css/*"
+      --reload-include "**/static/*/js/*"
+      --reload-include "**/static/*/img/*"
+      ${worker_options}
+      zelda.asgi:application
 
 shell:
   phony: true

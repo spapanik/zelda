@@ -75,13 +75,6 @@ if DEBUG:
     INSTALLED_APPS += [
         "django_extensions",
     ]
-    RUNSERVER_PLUS_EXTRA_FILES = [
-        "kuma.yml",
-        *(BASE_DIR.glob("**/templates/**/*.html")),
-        *(BASE_DIR.glob("**/static/*/css/*")),
-        *(BASE_DIR.glob("**/static/*/js/*")),
-        *(BASE_DIR.glob("**/static/*/img/*")),
-    ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -92,6 +85,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 TEMPLATES = [

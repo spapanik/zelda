@@ -1,10 +1,10 @@
 from collections.abc import Collection, Iterable
 from typing import Any, ClassVar, Self, TypeVar, cast
-from uuid import uuid4
+
+from pyutilkit.date_utils import now
 
 from django.db import models
 
-from zelda.lib.date_utils import now
 from zelda.lib.types import OnDeleteType
 
 _T_co = TypeVar("_T_co", bound=models.Model, covariant=True)
@@ -97,7 +97,6 @@ class BaseQuerySet(models.QuerySet[_T_co]):
 
 
 class BaseModel(models.Model):
-    uuid = models.UUIDField(default=uuid4, editable=False)
     created_at = models.DateTimeField(default=now, editable=False)
     updated_at = models.DateTimeField(default=now, editable=False)
 

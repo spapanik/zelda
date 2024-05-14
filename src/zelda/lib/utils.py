@@ -1,67 +1,57 @@
-import hashlib
-import logging
-from collections.abc import Callable
-from functools import wraps
+from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import ParamSpec, TypeVar
+from typing import TYPE_CHECKING, Literal, Self, cast
 
+from joselib import jwt
 from pathurl import URL, Query
+from pyutilkit.date_utils import now
+from pyutilkit.files import hash_file
 
 from django.conf import settings
 from django.db.migrations.loader import MigrationLoader
 from django.db.migrations.writer import MigrationWriter
 
-logger = logging.getLogger(__name__)
-INGEST_ERROR = "Function `%s` threw `%s` when called with args=%s and kwargs=%s"
-P = ParamSpec("P")
-R_co = TypeVar("R_co", covariant=True)
+if TYPE_CHECKING:
+    from zelda.users.models import User
 
 
-def handle_exceptions(
-    *,
-    exceptions: tuple[type[Exception], ...] = (Exception,),
-    default: R_co | None = None,
-    log_level: str = "info",
-) -> Callable[[Callable[P, R_co]], Callable[P, R_co | None]]:
-    def decorator(func: Callable[P, R_co]) -> Callable[P, R_co | None]:
-        @wraps(func)
-        def wrapper(*args: P.args, **kwargs: P.kwargs) -> R_co | None:
-            try:
-                return func(*args, **kwargs)
-            except exceptions as exc:
-                getattr(logger, log_level)(
-                    INGEST_ERROR,
-                    func.__name__,
-                    exc.__class__.__name__,
-                    args,
-                    kwargs,
-                    exc_info=True,
-                )
-                return default
+@dataclass
+class JWT:
+    sub: Literal["access", "refresh"]
+    email: str
+    exp: int
 
-        return wrapper
+    @classmethod
+    def for_user(cls, user: "User", jwt_type: Literal["access", "refresh"]) -> Self:
+        expiry_delta = (
+            settings.REFRESH_TOKEN_EXPIRY
+            if jwt_type == "refresh"
+            else settings.ACCESS_TOKEN_EXPIRY
+        )
+        return cls(
+            sub=jwt_type,
+            email=user.email,
+            exp=int((now() + expiry_delta).timestamp()),
+        )
 
-    return decorator
+    @classmethod
+    def from_token(cls, token: str) -> Self:
+        return cls(**jwt.decode(token, settings.SECRET_KEY, algorithms=["HS256"]))  # type: ignore[no-untyped-call]
+
+    def __str__(self) -> str:
+        return cast(
+            str, jwt.encode(asdict(self), settings.SECRET_KEY, algorithm="HS256")  # type: ignore[no-untyped-call]
+        )
 
 
 def get_app_url(path: str, **kwargs: str | list[str]) -> URL:
     return URL.from_parts(
         scheme=settings.BASE_SCHEME,
-        hostname=settings.BASE_DOMAIN,
-        port=settings.BASE_PORT,
+        hostname=settings.BASE_APP_DOMAIN,
+        port=settings.BASE_APP_PORT,
         path=path,
         query=Query.from_dict(dict_={}, **kwargs),
     )
-
-
-def hash_file(path: Path, buffer_size: int = 2**16) -> str:
-    sha256 = hashlib.sha256()
-
-    with path.open("rb") as f:
-        while data := f.read(buffer_size):
-            sha256.update(data)
-
-    return sha256.hexdigest()
 
 
 def hash_migrations() -> list[str]:

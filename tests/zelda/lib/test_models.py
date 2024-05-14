@@ -1,6 +1,6 @@
 import pytest
 
-from zelda.registration.models import User
+from zelda.users.models import User
 
 
 class TestBaseModel:

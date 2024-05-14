@@ -1,46 +1,52 @@
-from typing import Any
+from http import HTTPStatus
+from typing import Any, cast
 
-from django.forms import BaseForm
-from django.http import HttpRequest, HttpResponse
-from django.shortcuts import redirect, render
+from django.contrib.auth.models import AnonymousUser
+from django.http import HttpRequest
 from django.views import View
+from django.views.decorators.csrf import csrf_exempt
+
+from zelda.lib.http import JsonResponse
+from zelda.users.models import User
 
 
-class LoginRequiredError(RuntimeError):
-    pass
+class BaseAPIView(View):
+    @staticmethod
+    def has_permissions(_user: User | AnonymousUser) -> bool:
+        return True
 
-
-class BaseView(View):
-    template_name: str
-
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
-        return kwargs
-
-    def get_template_name(self, **_kwargs: Any) -> str:
-        return self.template_name
-
-    def render(self, context: dict[str, Any]) -> HttpResponse:
-        template = self.get_template_name(**context)
-        return render(self.request, template, context)
-
-    def get(
-        self, request: HttpRequest, *_args: Any, **kwargs: Any  # noqa: ARG002
-    ) -> HttpResponse:
+    @csrf_exempt
+    def dispatch(self, request: HttpRequest, *args: Any, **kwargs: Any) -> JsonResponse:
+        user: User | AnonymousUser
         try:
-            context = self.get_context_data(**kwargs)
-        except LoginRequiredError:
-            return redirect("login")
-        return self.render(context)
+            user = User.from_request(request)
+        except LookupError:
+            user = AnonymousUser()
+        if self.has_permissions(user):
+            self.request.user = user
+            return cast(JsonResponse, super().dispatch(request, *args, **kwargs))
+        if user.is_anonymous:
+            return JsonResponse(
+                {"error": {"message": "You must be logged in to perform this action."}},
+                status=HTTPStatus.UNAUTHORIZED,
+            )
+        return JsonResponse(
+            {
+                "error": {
+                    "message": "You do not have permission to perform this action."
+                }
+            },
+            status=HTTPStatus.FORBIDDEN,
+        )
 
 
-class BaseFormView(BaseView):
-    form_class: type[BaseForm]
+class BaseAuthenticatedAPIView(BaseAPIView):
+    @staticmethod
+    def has_permissions(user: User | AnonymousUser) -> bool:
+        return user.is_authenticated
 
-    @property
-    def get_form(self) -> type[BaseForm]:
-        return self.form_class
 
-    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
-        context = super().get_context_data(**kwargs)
-        context["form"] = self.get_form()
-        return context
+class BaseStaffAPIView(BaseAPIView):
+    @staticmethod
+    def has_permissions(user: User | AnonymousUser) -> bool:
+        return user.is_staff

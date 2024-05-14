@@ -4,10 +4,6 @@
 [![build automation: yam][yam_badge]][yam_url]
 [![Lint: ruff][ruff_badge]][ruff_url]
 
-[![build automation: yam](https://img.shields.io/badge/build%20automation-yamk-success)](https://github.com/spapanik/yamk)
-
-[![Lint: ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v1.json)](https://github.com/charliermarsh/ruff)
-
 ## Installation and Usage
 
 To install and run the server locally, you can use docker-compose.

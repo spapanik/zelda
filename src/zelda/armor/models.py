@@ -7,7 +7,7 @@ from django.db import models
 
 from zelda.lib.choices import ArmorSet, BodyPart, Item
 from zelda.lib.models import BaseModel, ForeignKey
-from zelda.registration.models import User
+from zelda.users.models import User
 
 
 class Armor(BaseModel):

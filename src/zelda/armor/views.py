@@ -8,7 +8,8 @@ from django.views.generic import TemplateView
 
 from zelda.armor.models import Armor, UserArmor
 from zelda.lib.choices import Item
-from zelda.lib.views import BaseView, LoginRequiredError
+from zelda.lib.exceptions import LoginRequiredError
+from zelda.lib.views import BaseAPIView
 
 
 class UserArmorDict(TypedDict):
@@ -17,7 +18,7 @@ class UserArmorDict(TypedDict):
     tooltip: str
 
 
-class ArmorView(BaseView):
+class ArmorView(BaseAPIView):
     template_name = "armor/armor.html"
 
     def get_context_data(self, **kwargs: Any) -> dict[str, Any]:  # noqa: ARG002

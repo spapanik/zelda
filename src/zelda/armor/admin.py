@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from zelda.armor.models import Armor, ArmorUpgradeCost
-from zelda.registration.admin import UserArmorInline
+from zelda.users.admin import UserArmorInline
 
 
 @admin.register(Armor)

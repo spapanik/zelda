@@ -11,56 +11,39 @@ $globals:
     cert_file: .ssl/certs/localhost.crt
     key_file_option: --ssl-keyfile ${key_file}
     cert_file_option: --ssl-certfile ${cert_file}
-    worker_options: --reload --lifespan off
+    reload: --reload --reload-include "zelda.yml"
+    worker_options: ${reload} --lifespan off
     worker_class: zelda.lib.workers.UvicornWorker
     webserver_host: 0.0.0.0
     webserver_port: "8000"
     shell_plus_extra: --quiet-load
-    static_verbosity: "0"
     poetry_sync: --sync
     input: --no-input
-    css_style: expanded
-    css_map: --no-source-map
-    css_dir: src/zelda/lib/static/lib/css
-    js_dir: src/zelda/lib/static/lib/js
-    img_files: $((glob **/static/*/img/*))
 
 update:
   alias: install
 
-install_state:
-  phony: true
-  keep_ts: true
-  requires:
-    - migrations
-
-install_code:
-  phony: true
-  keep_ts: true
-  requires:
-    - install_py
-    - static
-
-install:
-  phony: true
-  keep_ts: true
-  requires:
-    - install_code
-    - install_state
-
 format:
   phony: true
   requires:
-    - format_py
-    - format_js
+    - install_py
+  commands:
+    - "${runner} ruff check --fix-only ."
+    - "${runner} black ."
 
 lint:
   phony: true
   requires:
     - lint_py
-    - lint_js
   commands:
     - $(pwd)/enforce_eol.py
+
+install:
+  phony: true
+  keep_ts: true
+  requires:
+    - install_py
+    - migrations
 
 runserver:
   phony: true
@@ -74,11 +57,6 @@ runserver:
       ${cert_file_option}
       --host ${webserver_host}
       --port ${webserver_port}
-      --reload-include "zelda.yml"
-      --reload-include "**/templates/**/*.html"
-      --reload-include "**/static/*/css/*"
-      --reload-include "**/static/*/js/*"
-      --reload-include "**/static/*/img/*"
       ${worker_options}
       zelda.asgi:application
 
@@ -97,14 +75,6 @@ install_py:
   commands:
     - "poetry install ${poetry_sync} ${poetry_extra}"
 
-format_py:
-  phony: true
-  requires:
-    - install_py
-  commands:
-    - "${runner} ruff check --fix-only ."
-    - "${runner} black ."
-
 lint_py:
   phony: true
   requires:
@@ -116,28 +86,6 @@ lint_py:
     - "${runner} mypy ."
     - "${admin} checkmigrations"
     - "${admin} check"
-
-install_js:
-  phony: true
-  keep_ts: true
-  requires:
-    - pnpm-lock.yaml
-  commands:
-    - pnpm install --frozen-lockfile ${pnpm_extra}
-
-format_js:
-  phony: true
-  requires:
-    - install_js
-  commands:
-    - pnpm run format
-
-lint_js:
-  phony: true
-  requires:
-    - install_js
-  commands:
-    - pnpm run lint
 
 tests:
   phony: true
@@ -173,48 +121,3 @@ migrations:
     - migrations.lock
   commands:
     - "${admin} migrate ${input}"
-
-pnpm-lock.yaml:
-  update: true
-  requires:
-    - package.json
-  commands:
-    - pnpm install --lockfile-only
-
-${js_dir}/base.js:
-  regex: true
-  requires:
-    - ${js_dir}/base.ts
-  commands:
-    - pnpm run tsc
-
-js:
-  phony: true
-  keep_ts: true
-  requires:
-    - ${js_dir}/base.js
-
-${css_dir}/base.css:
-  regex: true
-  requires:
-    - ${css_dir}/base.scss
-  commands:
-    - pnpm run sass -s ${css_style} ${css_map} ${.requirements:0} ${.target}
-
-css:
-  phony: true
-  keep_ts: true
-  requires:
-    - ${css_dir}/base.css
-
-static:
-  phony: true
-  keep_ts: true
-  requires:
-    - install_py
-    - install_js
-    - ${img_files}
-    - css
-    - js
-  commands:
-    - ${admin} collectstatic ${input} -v ${static_verbosity} -i "*.scss" -i "*.ts" ${static_extra}

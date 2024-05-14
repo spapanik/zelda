@@ -1,12 +1,14 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any, ClassVar
+from typing import TYPE_CHECKING, Any, ClassVar, Self
 
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.http import HttpRequest
 
 from zelda.lib.models import BaseModel, BaseQuerySet
+from zelda.lib.utils import JWT
 
 if TYPE_CHECKING:
     from zelda.armor.models import UserArmor
@@ -64,8 +66,37 @@ class User(AbstractUser, BaseModel):
     objects: ClassVar[UserManager] = UserManager()
     armor_levels: ClassVar[models.Manager[UserArmor]]
 
-    class Meta(AbstractUser.Meta):
+    class Meta(AbstractUser.Meta):  # type: ignore[name-defined,misc]
         swappable = "AUTH_USER_MODEL"
 
     def __str__(self) -> str:
         return self.email
+
+    @classmethod
+    def from_request(cls, request: HttpRequest) -> Self:
+        bearer = request.META.get("HTTP_AUTHORIZATION")
+        if not bearer:
+            msg = "No bearer token"
+            raise LookupError(msg)
+
+        _, token = bearer.split()
+        jwt = JWT.from_token(token)
+        if jwt.sub != "access":
+            msg = "Not an access token"
+            raise LookupError(msg)
+
+        try:
+            user: Self = cls.objects.get(email=jwt.email)
+        except cls.DoesNotExist as exc:
+            msg = "No such user"
+            raise LookupError(msg) from exc
+
+        return user
+
+    def get_tokens(self) -> dict[str, str]:
+        refresh_token = JWT.for_user(self, "refresh")
+        access_token = JWT.for_user(self, "access")
+        return {
+            "refresh": str(refresh_token),
+            "access": str(access_token),
+        }

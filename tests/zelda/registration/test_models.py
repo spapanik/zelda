@@ -3,7 +3,7 @@ from typing import Any
 
 import pytest
 
-from zelda.registration.models import User
+from zelda.users.models import User
 
 
 @pytest.mark.django_db()

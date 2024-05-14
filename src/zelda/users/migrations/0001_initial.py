@@ -4,7 +4,7 @@ import django.utils.timezone
 from django.db import migrations, models
 
 import zelda.lib.date_utils
-import zelda.registration.models
+import zelda.users.models
 
 
 class Migration(migrations.Migration):
@@ -108,7 +108,7 @@ class Migration(migrations.Migration):
                 "swappable": "AUTH_USER_MODEL",
             },
             managers=[
-                ("objects", zelda.registration.models.UserManager()),
+                ("objects", zelda.users.models.UserManager()),
             ],
         ),
     ]

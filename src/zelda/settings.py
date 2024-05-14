@@ -1,5 +1,6 @@
 import contextlib
 import pathlib
+from datetime import timedelta
 from functools import partial
 
 import django_stubs_ext
@@ -36,37 +37,68 @@ if BASE_SCHEME == "https":
     CSRF_COOKIE_SECURE = True
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
+
+access_token_expiry = project_setting(
+    "ACCESS_TOKEN_EXPIRY",
+    sections=["project", "tokens"],
+    rtype=dict,
+    default={"days": 365},
+)
+ACCESS_TOKEN_EXPIRY = timedelta(**access_token_expiry)
+refresh_token_expiry = project_setting(
+    "REFRESH_TOKEN_EXPIRY",
+    sections=["project", "tokens"],
+    rtype=dict,
+    default={"days": 3650},
+)
+REFRESH_TOKEN_EXPIRY = timedelta(**refresh_token_expiry)
 # endregion
 
 # region Application definition
 DEBUG = project_setting("DEBUG", sections=["project", "app"], rtype=bool, default=True)
-BASE_DOMAIN = project_setting(
-    "BASE_DOMAIN", sections=["project", "servers"], default="localhost"
+BASE_API_DOMAIN = project_setting(
+    "BASE_API_DOMAIN", sections=["project", "servers"], default="localhost"
 )
-BASE_PORT = project_setting(
-    "BASE_PORT", sections=["project", "servers"], rtype=int, default=8000
+BASE_API_PORT = project_setting(
+    "BASE_API_PORT", sections=["project", "servers"], rtype=int, default=8000
 )
-EXTRA_DOMAINS = project_setting(
-    "EXTRA_DOMAINS", sections=["project", "servers"], rtype=list, default=["127.0.0.1"]
+EXTRA_API_DOMAINS = project_setting(
+    "EXTRA_API_DOMAINS",
+    sections=["project", "servers"],
+    rtype=list,
+    default=["127.0.0.1"],
 )
-ALLOWED_HOSTS = [BASE_DOMAIN, *EXTRA_DOMAINS]
+BASE_APP_DOMAIN = project_setting(
+    "BASE_APP_DOMAIN", sections=["project", "servers"], default="localhost"
+)
+BASE_APP_PORT = project_setting(
+    "BASE_APP_PORT", sections=["project", "servers"], rtype=int, default=5173
+)
+EXTRA_APP_DOMAINS = project_setting(
+    "EXTRA_APP_DOMAINS",
+    sections=["project", "servers"],
+    rtype=list,
+    default=["127.0.0.1"],
+)
+ALLOWED_HOSTS = [
+    BASE_API_DOMAIN,
+    *EXTRA_API_DOMAINS,
+    BASE_APP_DOMAIN,
+    *EXTRA_APP_DOMAINS,
+]
 
-AUTH_USER_MODEL = "registration.User"
+AUTH_USER_MODEL = "users.User"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 ROOT_URLCONF = "zelda.urls"
 
 INSTALLED_APPS = [
     "django.contrib.contenttypes",
-    "zelda.branding",
-    "grappelli.dashboard",
-    "grappelli",
-    "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
+    "corsheaders",
     "zelda.lib",
-    "zelda.registration",
+    "zelda.users",
     "zelda.armor",
     "zelda.home",
 ]
@@ -78,14 +110,8 @@ if DEBUG:
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.locale.LocaleMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 TEMPLATES = [
@@ -108,9 +134,6 @@ EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR.joinpath("local", "emails")
 
 MIGRATION_HASHES_PATH = BASE_DIR.joinpath("migrations.lock")
-
-LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/"
 # endregion
 
 # region Databases
@@ -119,30 +142,8 @@ DATABASES = {
 }
 # endregion
 
-# region Static files
-STORAGES = {
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
-    },
-}
-# endregion
-
-# region Static files
-STATIC_URL = "/static/"
-STATIC_ROOT = BASE_DIR.joinpath(".static")
-# endregion
-
 # region i18n/l10n
-LANGUAGE_CODE = "en"
-LANGUAGES = [("en", "English")]
-# endregion
-
-# region 3rd party
-GRAPPELLI_INDEX_DASHBOARD = "zelda.home.dashboard.AdminDashboard"
-GRAPPELLI_ADMIN_TITLE = "zelda"
+TIME_ZONE = "UTC"
 # endregion
 
 with contextlib.suppress(ImportError):
